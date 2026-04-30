@@ -1,0 +1,307 @@
+{
+  "tema": "Hustota",
+  "otazky": [
+    {
+      "id": 1,
+      "otazka": "Co vyjadřuje hustota látky?",
+      "a": "Kolik látky je v objemu",
+      "b": "Jak rychle se látka pohybuje",
+      "c": "Jakou má látka teplotu",
+      "d": "Jak silně látka svítí",
+      "spravna": "a",
+      "vysvetleni": "Hustota udává, kolik hmotnosti připadá na jednotku objemu."
+    },
+    {
+      "id": 2,
+      "otazka": "Značka hustoty je:",
+      "a": "m",
+      "b": "ρ",
+      "c": "V",
+      "d": "F",
+      "spravna": "b",
+      "vysvetleni": "Hustota se značí řeckým písmenem ró (ρ)."
+    },
+    {
+      "id": 3,
+      "otazka": "Vzorec pro výpočet hustoty je:",
+      "a": "ρ = V / m",
+      "b": "ρ = m / V",
+      "c": "ρ = m · V",
+      "d": "ρ = m + V",
+      "spravna": "b",
+      "vysvetleni": "Hustota je hmotnost dělená objemem."
+    },
+    {
+      "id": 4,
+      "otazka": "Jednotka hustoty v SI soustavě je:",
+      "a": "kg",
+      "b": "m³",
+      "c": "kg/m³",
+      "d": "N",
+      "spravna": "c",
+      "vysvetleni": "Hustota má jednotku kilogram na metr krychlový."
+    },
+    {
+      "id": 5,
+      "otazka": "Co má větší hustotu?",
+      "a": "Olej",
+      "b": "Voda",
+      "c": "Vzduch",
+      "d": "Polystyren",
+      "spravna": "b",
+      "vysvetleni": "Voda má vyšší hustotu než olej i vzduch."
+    },
+    {
+      "id": 6,
+      "otazka": "Těleso plave ve vodě, pokud:",
+      "a": "má větší hustotu než voda",
+      "b": "má stejnou hustotu jako voda",
+      "c": "má menší hustotu než voda",
+      "d": "je těžké",
+      "spravna": "c",
+      "vysvetleni": "Menší hustota než kapalina znamená, že těleso plave."
+    },
+    {
+      "id": 7,
+      "otazka": "Co se stane s hustotou, když zvětšíme objem při stejné hmotnosti?",
+      "a": "Zvětší se",
+      "b": "Zmenší se",
+      "c": "Zůstane stejná",
+      "d": "Zmizí",
+      "spravna": "b",
+      "vysvetleni": "Při větším objemu je hustota menší."
+    },
+    {
+      "id": 8,
+      "otazka": "Co se stane s hustotou, když zvětšíme hmotnost při stejném objemu?",
+      "a": "Zvětší se",
+      "b": "Zmenší se",
+      "c": "Zůstane stejná",
+      "d": "Nelze určit",
+      "spravna": "a",
+      "vysvetleni": "Větší hmotnost znamená větší hustotu."
+    },
+    {
+      "id": 9,
+      "otazka": "Která látka má nejmenší hustotu?",
+      "a": "Železo",
+      "b": "Voda",
+      "c": "Vzduch",
+      "d": "Hliník",
+      "spravna": "c",
+      "vysvetleni": "Vzduch má velmi malou hustotu."
+    },
+    {
+      "id": 10,
+      "otazka": "Hustota vody je přibližně:",
+      "a": "10 kg/m³",
+      "b": "100 kg/m³",
+      "c": "1000 kg/m³",
+      "d": "10000 kg/m³",
+      "spravna": "c",
+      "vysvetleni": "Hustota vody je asi 1000 kg/m³."
+    },
+
+    {
+      "id": 11,
+      "otazka": "Jak zjistíme hustotu tělesa?",
+      "a": "Změříme hmotnost a objem",
+      "b": "Změříme rychlost",
+      "c": "Změříme čas",
+      "d": "Změříme teplotu",
+      "spravna": "a",
+      "vysvetleni": "Hustotu vypočítáme z hmotnosti a objemu."
+    },
+    {
+      "id": 12,
+      "otazka": "Který přístroj používáme na měření hmotnosti?",
+      "a": "Pravítko",
+      "b": "Teploměr",
+      "c": "Váhy",
+      "d": "Stopky",
+      "spravna": "c",
+      "vysvetleni": "Hmotnost měříme na vahách."
+    },
+    {
+      "id": 13,
+      "otazka": "Který přístroj používáme na měření objemu kapaliny?",
+      "a": "Váhy",
+      "b": "Odměrný válec",
+      "c": "Teploměr",
+      "d": "Siloměr",
+      "spravna": "b",
+      "vysvetleni": "Objem kapaliny měříme odměrným válcem."
+    },
+    {
+      "id": 14,
+      "otazka": "Proč led plave na vodě?",
+      "a": "Je těžší",
+      "b": "Má větší hustotu",
+      "c": "Má menší hustotu",
+      "d": "Je studený",
+      "spravna": "c",
+      "vysvetleni": "Led má menší hustotu než voda."
+    },
+    {
+      "id": 15,
+      "otazka": "Co se stane s hustotou plynu při zahřátí?",
+      "a": "Zvětší se",
+      "b": "Zmenší se",
+      "c": "Zůstane stejná",
+      "d": "Zmizí",
+      "spravna": "b",
+      "vysvetleni": "Plyn se rozpíná → větší objem → menší hustota."
+    },
+    {
+      "id": 16,
+      "otazka": "Který materiál má větší hustotu?",
+      "a": "Dřevo",
+      "b": "Železo",
+      "c": "Polystyren",
+      "d": "Vzduch",
+      "spravna": "b",
+      "vysvetleni": "Kovy mají větší hustotu než většina jiných látek."
+    },
+    {
+      "id": 17,
+      "otazka": "Jednotka g/cm³ znamená:",
+      "a": "gram na centimetr",
+      "b": "gram na centimetr krychlový",
+      "c": "gram krát centimetr",
+      "d": "gram děleno centimetr",
+      "spravna": "b",
+      "vysvetleni": "Je to jednotka hustoty."
+    },
+    {
+      "id": 18,
+      "otazka": "Co má větší hustotu – slaná nebo sladká voda?",
+      "a": "Sladká",
+      "b": "Slaná",
+      "c": "Stejnou",
+      "d": "Nelze určit",
+      "spravna": "b",
+      "vysvetleni": "Sůl zvyšuje hustotu vody."
+    },
+    {
+      "id": 19,
+      "otazka": "Když těleso klesne ke dnu, znamená to:",
+      "a": "Má menší hustotu než kapalina",
+      "b": "Má větší hustotu než kapalina",
+      "c": "Má nulovou hustotu",
+      "d": "Nemá objem",
+      "spravna": "b",
+      "vysvetleni": "Větší hustota → těleso se potopí."
+    },
+    {
+      "id": 20,
+      "otazka": "Co ovlivňuje hustotu látky?",
+      "a": "Teplota",
+      "b": "Tlak",
+      "c": "Druh látky",
+      "d": "Všechny možnosti",
+      "spravna": "d",
+      "vysvetleni": "Hustotu ovlivňuje více faktorů."
+    },
+
+    {
+      "id": 21,
+      "otazka": "Které těleso bude plavat?",
+      "a": "ρ = 800 kg/m³ ve vodě",
+      "b": "ρ = 1200 kg/m³ ve vodě",
+      "c": "ρ = 2000 kg/m³ ve vodě",
+      "d": "ρ = 1500 kg/m³ ve vodě",
+      "spravna": "a",
+      "vysvetleni": "Menší hustota než voda → plave."
+    },
+    {
+      "id": 22,
+      "otazka": "Co znamená, že dvě látky mají stejnou hustotu?",
+      "a": "Mají stejnou hmotnost",
+      "b": "Mají stejný objem",
+      "c": "Mají stejný poměr m/V",
+      "d": "Jsou stejné",
+      "spravna": "c",
+      "vysvetleni": "Hustota je poměr hmotnosti a objemu."
+    },
+    {
+      "id": 23,
+      "otazka": "Jaká je hustota, když m = 2 kg a V = 1 m³?",
+      "a": "0,5 kg/m³",
+      "b": "1 kg/m³",
+      "c": "2 kg/m³",
+      "d": "3 kg/m³",
+      "spravna": "c",
+      "vysvetleni": "ρ = 2 / 1 = 2 kg/m³."
+    },
+    {
+      "id": 24,
+      "otazka": "Jaká je hustota, když m = 4 kg a V = 2 m³?",
+      "a": "1 kg/m³",
+      "b": "2 kg/m³",
+      "c": "4 kg/m³",
+      "d": "8 kg/m³",
+      "spravna": "b",
+      "vysvetleni": "ρ = 4 / 2 = 2 kg/m³."
+    },
+    {
+      "id": 25,
+      "otazka": "Co znamená velká hustota?",
+      "a": "Málo hmoty v objemu",
+      "b": "Hodně hmoty v malém objemu",
+      "c": "Velký objem",
+      "d": "Malá hmotnost",
+      "spravna": "b",
+      "vysvetleni": "Velká hustota = hodně hmoty natěsnané v malém objemu."
+    },
+    {
+      "id": 26,
+      "otazka": "Která látka se potopí ve vodě?",
+      "a": "Dřevo",
+      "b": "Led",
+      "c": "Železo",
+      "d": "Olej",
+      "spravna": "c",
+      "vysvetleni": "Železo má větší hustotu než voda."
+    },
+    {
+      "id": 27,
+      "otazka": "Hustota se mění s:",
+      "a": "Barvou",
+      "b": "Teplotou",
+      "c": "Tvarem",
+      "d": "Vůní",
+      "spravna": "b",
+      "vysvetleni": "Teplota ovlivňuje hustotu."
+    },
+    {
+      "id": 28,
+      "otazka": "Který stav látek má nejmenší hustotu?",
+      "a": "Pevný",
+      "b": "Kapalný",
+      "c": "Plynný",
+      "d": "Všechny stejné",
+      "spravna": "c",
+      "vysvetleni": "Plyny mají nejmenší hustotu."
+    },
+    {
+      "id": 29,
+      "otazka": "Když zvětšíme tlak na plyn, hustota:",
+      "a": "Klesne",
+      "b": "Vzroste",
+      "c": "Zůstane stejná",
+      "d": "Zmizí",
+      "spravna": "b",
+      "vysvetleni": "Plyn se stlačí → menší objem → větší hustota."
+    },
+    {
+      "id": 30,
+      "otazka": "Hustota je fyzikální veličina:",
+      "a": "Základní",
+      "b": "Odvozená",
+      "c": "Náhodná",
+      "d": "Neexistuje",
+      "spravna": "b",
+      "vysvetleni": "Hustota je odvozená veličina (z hmotnosti a objemu)."
+    }
+  ]
+}
