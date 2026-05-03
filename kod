@@ -1,0 +1,1801 @@
+<!doctype html>
+<html lang="cs" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>BATTLE QUIZ – Lodě pro ZŠ</title>
+
+  <!-- Canva SDK: v Canvě funguje, mimo Canvu se bezpečně přeskočí -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: #0a0e27;
+      color: #e4e8ff;
+      overflow: hidden;
+    }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .ocean-bg {
+      background:
+        radial-gradient(ellipse at 20% 10%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #0a0e27 0%, #0f1638 50%, #0a0e27 100%);
+    }
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    #app {
+      height: 100dvh;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
+
+    .glow-cyan { box-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(34, 211, 238, 0.2); }
+    .glow-pink { box-shadow: 0 0 30px rgba(236, 72, 153, 0.4), 0 0 60px rgba(236, 72, 153, 0.2); }
+
+    .card-glass {
+      background: rgba(15, 23, 55, 0.62);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 20px;
+    }
+
+    .input-field {
+      background: rgba(15, 23, 55, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #e4e8ff;
+      padding: 14px 18px;
+      border-radius: 12px;
+      width: 100%;
+      font-size: 16px;
+      transition: all .2s;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #22d3ee;
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, .15);
+    }
+    textarea.input-field { min-height: 140px; resize: vertical; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+      color: white;
+      font-weight: 700;
+      padding: 14px 22px;
+      border-radius: 14px;
+      transition: all .2s;
+      box-shadow: 0 4px 20px rgba(6, 182, 212, .35);
+    }
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(6, 182, 212, .55);
+    }
+    .btn-secondary {
+      background: rgba(56, 189, 248, .1);
+      border: 1px solid rgba(56, 189, 248, .3);
+      color: #7dd3fc;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 12px;
+      transition: all .2s;
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: rgba(56, 189, 248, .2);
+      border-color: rgba(56, 189, 248, .55);
+    }
+    .btn-danger {
+      background: linear-gradient(135deg, #ec4899, #db2777);
+      color: white;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(236, 72, 153, .35);
+    }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+
+    .cell {
+      aspect-ratio: 1;
+      min-width: 0;
+      border: 1px solid rgba(56, 189, 248, .16);
+      background: rgba(14, 165, 233, .045);
+      transition: all .16s;
+      position: relative;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      touch-action: manipulation;
+    }
+    .cell:hover:not(:disabled) {
+      background: rgba(56, 189, 248, .15);
+      border-color: rgba(56, 189, 248, .5);
+      transform: scale(1.02);
+    }
+    .cell-ship {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      border-color: #22d3ee;
+      box-shadow: inset 0 0 8px rgba(255,255,255,.22);
+    }
+    .cell-ship-preview {
+      background: linear-gradient(135deg, rgba(6,182,212,.48), rgba(8,145,178,.48)) !important;
+      border-color: #22d3ee !important;
+    }
+    .cell-ship-invalid {
+      background: rgba(239,68,68,.32) !important;
+      border-color: #ef4444 !important;
+    }
+    .cell-hit {
+      background: radial-gradient(circle, #ef4444, #991b1b);
+      border-color: #fca5a5;
+      animation: hitPulse .55s ease-out;
+    }
+    .cell-miss {
+      background: rgba(148,163,184,.22);
+      border-color: rgba(148,163,184,.42);
+    }
+    .cell-miss::after {
+      content: '';
+      position: absolute;
+      inset: 30%;
+      background: rgba(148,163,184,.68);
+      border-radius: 50%;
+    }
+    .cell-sunk {
+      background: linear-gradient(135deg, #7c2d12, #450a0a);
+      border-color: #dc2626;
+    }
+    .coord-label {
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(125, 211, 252, .45);
+      pointer-events: none;
+      position: absolute;
+      top: 2px;
+      left: 4px;
+    }
+
+    .ship-tile {
+      background: rgba(6, 182, 212, .15);
+      border: 1px solid rgba(6, 182, 212, .42);
+      border-radius: 12px;
+      padding: 10px 7px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .ship-tile.selected {
+      background: rgba(6, 182, 212, .42);
+      border-color: #22d3ee;
+      box-shadow: 0 0 15px rgba(34, 211, 238, .5);
+    }
+    .ship-tile.placed { opacity: .35; cursor: not-allowed; }
+    .ship-block {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      border-radius: 3px;
+      box-shadow: inset 0 0 4px rgba(255,255,255,.3);
+    }
+
+    .code-digit {
+      width: 52px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(6,182,212,.2), rgba(14,165,233,.1));
+      border: 2px solid rgba(34, 211, 238, .4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22d3ee;
+      text-shadow: 0 0 10px rgba(34, 211, 238, .6);
+    }
+
+    .question-card {
+      background: linear-gradient(135deg, rgba(168, 85, 247, .18), rgba(236, 72, 153, .11));
+      border: 1px solid rgba(168, 85, 247, .34);
+    }
+    .answer-btn {
+      background: rgba(15, 23, 55, .64);
+      border: 1px solid rgba(168, 85, 247, .25);
+      color: #e4e8ff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-align: left;
+      transition: all .2s;
+      width: 100%;
+    }
+    .answer-btn:hover:not(:disabled) {
+      background: rgba(168, 85, 247, .16);
+      border-color: rgba(168, 85, 247, .65);
+      transform: translateX(4px);
+    }
+    .answer-correct {
+      background: rgba(34,197,94,.22) !important;
+      border-color: #22c55e !important;
+      color: #86efac !important;
+    }
+    .answer-wrong {
+      background: rgba(239,68,68,.22) !important;
+      border-color: #ef4444 !important;
+      color: #fca5a5 !important;
+    }
+
+    .toast {
+      position: fixed;
+      top: max(16px, env(safe-area-inset-top));
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 20px;
+      border-radius: 12px;
+      z-index: 2000;
+      animation: slideDown .25s ease-out;
+      backdrop-filter: blur(10px);
+      max-width: 92%;
+      font-weight: 700;
+      box-shadow: 0 10px 35px rgba(0,0,0,.25);
+    }
+    .toast-success { background: rgba(34, 197, 94, .92); color: white; }
+    .toast-error { background: rgba(239, 68, 68, .92); color: white; }
+    .toast-info { background: rgba(34, 211, 238, .92); color: #06202a; }
+
+    .loader {
+      border: 3px solid rgba(34, 211, 238, .2);
+      border-top-color: #22d3ee;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      animation: spin .8s linear infinite;
+    }
+    .tab-active {
+      background: linear-gradient(135deg, rgba(6,182,212,.3), rgba(14,165,233,.2)) !important;
+      border-color: #22d3ee !important;
+      color: #22d3ee !important;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes hitPulse {
+      0% { transform: scale(1.25); box-shadow: 0 0 40px #ef4444; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #ef4444; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-anim { animation: float 3s ease-in-out infinite; }
+    @keyframes slideUp {
+      from { transform: translateY(28px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translate(-50%, -16px); opacity: 0; }
+      to { transform: translate(-50%, 0); opacity: 1; }
+    }
+    .slide-up { animation: slideUp .35s ease-out; }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .turn-indicator {
+      background: linear-gradient(90deg, rgba(6,182,212,.10), rgba(34,211,238,.28), rgba(6,182,212,.10));
+      background-size: 200% 100%;
+      animation: shimmer 2.4s infinite;
+    }
+    .pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 18px rgba(34,211,238,.35); }
+      50% { box-shadow: 0 0 38px rgba(34,211,238,.7); }
+    }
+
+    @media (max-width: 420px) {
+      .code-digit { width: 44px; height: 56px; font-size: 28px; }
+      .btn-primary, .btn-secondary, .btn-danger { padding: 12px 14px; }
+      .cell { border-radius: 4px; }
+      .coord-label { display: none; }
+    }
+  </style>
+</head>
+
+<body class="h-full ocean-bg">
+  <main id="app" class="grid-pattern"></main>
+
+<script>
+/* ============================================================
+   BATTLE QUIZ – LODĚ PRO ZŠ
+   Kompletně přepracovaná verze:
+   - funguje v Canvě s dataSdk
+   - funguje i mimo Canvu v lokálním režimu přes localStorage
+   - robustní načítání JSON z GitHub raw URL
+   - opravené odpovědi a/b/c/d
+   - učitelský režim, tester JSON, vlastní okruhy
+   ============================================================ */
+
+const DEFAULT_QUESTIONS_URL = 'https://raw.githubusercontent.com/jenirCZ/honzauci/refs/heads/main/Hustota%202';
+
+const DEFAULT_QUESTIONS = [
+  { id: 1, otazka: "Kterým písmenem řecké abecedy obvykle značíme hustotu?", moznosti: { a: "ρ (ró)", b: "σ (sigma)", c: "ω (omega)", d: "δ (delta)" }, spravna_odpoved: "a" },
+  { id: 2, otazka: "Jak zní základní vzorec pro výpočet hustoty?", moznosti: { a: "ρ = m · V", b: "ρ = m / V", c: "ρ = V / m", d: "ρ = m + V" }, spravna_odpoved: "b" },
+  { id: 3, otazka: "Jaká je základní jednotka hustoty v SI?", moznosti: { a: "kg/m³", b: "g/cm", c: "N/kg", d: "m³/kg" }, spravna_odpoved: "a" },
+  { id: 4, otazka: "Co znamená, že má látka velkou hustotu?", moznosti: { a: "Má velký objem a malou hmotnost", b: "Na malý objem připadá velká hmotnost", c: "Vždy plave na vodě", d: "Je vždy kapalná" }, spravna_odpoved: "b" }
+];
+
+const BOARD_SIZE = 8;
+const SHIPS = [
+  { size: 4, count: 1, name: "Bitevní loď" },
+  { size: 3, count: 2, name: "Křižník" },
+  { size: 2, count: 3, name: "Torpédovka" },
+  { size: 1, count: 4, name: "Ponorka" }
+];
+
+const app = document.getElementById('app');
+
+const state = {
+  view: 'menu',
+  playerName: '',
+  playerRole: null,
+  currentGame: null,
+  allRecords: [],
+  allGames: [],
+  allTopics: [],
+  myBoard: createEmptyBoard(),
+  placedShips: [],
+  selectedShipSize: null,
+  shipOrientation: 'h',
+  questions: normalizeQuestions(DEFAULT_QUESTIONS),
+  questionAnswered: false,
+  adminAuthenticated: false,
+  activeAdminTab: 'topics',
+  storageMode: 'local',
+  lastQuestionIds: []
+};
+
+const defaultConfig = {
+  app_title: "BATTLE QUIZ",
+  app_subtitle: "Lodě · Otázky · Souboj"
+};
+
+function createEmptyBoard() {
+  return Array.from({ length: BOARD_SIZE }, () => Array(BOARD_SIZE).fill(0));
+}
+
+function escapeHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function toast(msg, type = 'info') {
+  const t = document.createElement('div');
+  t.className = `toast toast-${type}`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2800);
+}
+
+function safeIcons() {
+  if (window.lucide) lucide.createIcons();
+}
+
+function generateId() {
+  return 'id_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+function generateGameCode() {
+  return Math.floor(1000 + Math.random() * 9000).toString();
+}
+
+function asStringKey(k) {
+  return String(k ?? '').trim().toLowerCase();
+}
+
+/* ===================== JSON LOADER + VALIDATION ===================== */
+
+function normalizeQuestions(raw) {
+  if (!Array.isArray(raw)) throw new Error('JSON musí být pole otázek.');
+  if (raw.length === 0) throw new Error('JSON neobsahuje žádné otázky.');
+
+  return raw.map((q, index) => {
+    if (!q || typeof q !== 'object') throw new Error(`Otázka ${index + 1} není objekt.`);
+    const text = q.otazka ?? q.question ?? q.text;
+    const options = q.moznosti ?? q.options ?? q.answers;
+    const correct = q.spravna_odpoved ?? q.correct ?? q.answer;
+
+    if (!text || typeof text !== 'string') throw new Error(`Otázka ${index + 1} nemá text "otazka".`);
+    if (!options || typeof options !== 'object' || Array.isArray(options)) throw new Error(`Otázka ${index + 1} nemá objekt "moznosti".`);
+
+    const keys = ['a', 'b', 'c', 'd'];
+    const normalizedOptions = {};
+    for (const k of keys) {
+      if (options[k] == null || String(options[k]).trim() === '') {
+        throw new Error(`Otázka ${index + 1} nemá možnost "${k}".`);
+      }
+      normalizedOptions[k] = String(options[k]);
+    }
+
+    const correctKey = asStringKey(correct);
+    if (!keys.includes(correctKey)) {
+      throw new Error(`Otázka ${index + 1} má špatnou hodnotu "spravna_odpoved". Musí být a, b, c nebo d.`);
+    }
+
+    return {
+      id: q.id ?? index + 1,
+      otazka: text.trim(),
+      moznosti: normalizedOptions,
+      spravna_odpoved: correctKey
+    };
+  });
+}
+
+async function loadQuestionsFromUrl(url) {
+  const cleanUrl = String(url || '').trim();
+  if (!cleanUrl) throw new Error('Zadej URL adresu.');
+  if (!/^https?:\/\//i.test(cleanUrl)) throw new Error('URL musí začínat http:// nebo https://.');
+
+  const res = await fetch(cleanUrl, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`URL se nepodařilo načíst. HTTP ${res.status}.`);
+
+  const text = await res.text();
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch (e) {
+    throw new Error('Soubor není platný JSON. Zkontroluj, že na URL není HTML stránka, ale raw JSON.');
+  }
+  return normalizeQuestions(data);
+}
+
+function prettyQuestionResult(questions) {
+  return `
+    <div class="p-3 rounded-xl bg-green-500/15 border border-green-500/30">
+      <div class="flex items-center gap-2 text-green-300 text-sm font-bold mb-2">
+        <i data-lucide="check-circle" class="w-4 h-4"></i> JSON je v pořádku
+      </div>
+      <p class="text-xs text-green-100/80">Načteno <strong>${questions.length}</strong> otázek.</p>
+      <p class="text-xs text-green-100/80 mt-1">Ukázka: „${escapeHtml(questions[0].otazka)}“</p>
+    </div>
+  `;
+}
+
+/* ===================== STORAGE LAYER ===================== */
+
+const localStore = {
+  key: 'battle_quiz_lode_records_v2',
+  read() {
+    try { return JSON.parse(localStorage.getItem(this.key) || '[]'); }
+    catch { return []; }
+  },
+  write(records) {
+    localStorage.setItem(this.key, JSON.stringify(records));
+    receiveData(records);
+  },
+  async create(record) {
+    const records = this.read();
+    const stored = { ...record, __backendId: generateId() };
+    records.push(stored);
+    this.write(records);
+    return { isOk: true, record: stored };
+  },
+  async update(record) {
+    const records = this.read();
+    const id = record.__backendId;
+    const idx = records.findIndex(r => r.__backendId === id);
+    if (idx < 0) return { isOk: false };
+    records[idx] = { ...record };
+    this.write(records);
+    return { isOk: true };
+  },
+  async delete(record) {
+    const records = this.read().filter(r => r.__backendId !== record.__backendId);
+    this.write(records);
+    return { isOk: true };
+  }
+};
+
+const store = {
+  async create(record) {
+    if (window.dataSdk) return await window.dataSdk.create(record);
+    return await localStore.create(record);
+  },
+  async update(record) {
+    if (window.dataSdk) return await window.dataSdk.update(record);
+    return await localStore.update(record);
+  },
+  async delete(record) {
+    if (window.dataSdk) return await window.dataSdk.delete(record);
+    return await localStore.delete(record);
+  }
+};
+
+function receiveData(data) {
+  state.allRecords = Array.isArray(data) ? data : [];
+  state.allGames = state.allRecords.filter(r => r.type === 'game' || !r.type);
+  state.allTopics = state.allRecords.filter(r => r.type === 'topic');
+
+  if (state.currentGame) {
+    const updated = state.allGames.find(g => g.__backendId === state.currentGame.__backendId);
+    if (updated) {
+      // DŮLEŽITÉ:
+      // Původní verze překreslovala obrazovku i tehdy, když se data vůbec nezměnila.
+      // Na obrazovce s čtyřmístným kódem to způsobovalo opakované spouštění animace.
+      const oldSnapshot = JSON.stringify(state.currentGame);
+      const newSnapshot = JSON.stringify(updated);
+      if (oldSnapshot === newSnapshot) return;
+
+      const oldStatus = state.currentGame.status;
+      const oldTurn = state.currentGame.currentTurn;
+      const oldQuestion = state.currentGame.currentQuestion;
+      state.currentGame = updated;
+
+      if (updated.questionsJson) {
+        try { state.questions = normalizeQuestions(JSON.parse(updated.questionsJson)); }
+        catch {}
+      }
+
+      if (updated.status === 'finished') {
+        state.view = 'gameover';
+        render();
+      } else if (oldStatus !== updated.status || oldTurn !== updated.currentTurn || oldQuestion !== updated.currentQuestion || ['waiting','placing','playing','admin'].includes(state.view)) {
+        if (updated.status === 'placing') state.view = 'placing';
+        if (updated.status === 'playing') state.view = 'playing';
+        render();
+      }
+    }
+  }
+}
+
+async function init() {
+  if (window.elementSdk) {
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => {
+        document.querySelectorAll('[data-bind="app_title"]').forEach(el => el.textContent = config.app_title || defaultConfig.app_title);
+        document.querySelectorAll('[data-bind="app_subtitle"]').forEach(el => el.textContent = config.app_subtitle || defaultConfig.app_subtitle);
+      },
+      mapToCapabilities: () => ({ recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined }),
+      mapToEditPanelValues: (config) => new Map([
+        ["app_title", config.app_title || defaultConfig.app_title],
+        ["app_subtitle", config.app_subtitle || defaultConfig.app_subtitle]
+      ])
+    });
+  }
+
+  if (window.dataSdk) {
+    state.storageMode = 'canva';
+    await window.dataSdk.init({ onDataChanged: receiveData });
+  } else {
+    state.storageMode = 'local';
+    receiveData(localStore.read());
+    window.addEventListener('storage', () => receiveData(localStore.read()));
+    setInterval(() => receiveData(localStore.read()), 1000);
+  }
+
+  render();
+}
+
+/* ===================== RENDERING ===================== */
+
+function render() {
+  const views = {
+    menu: renderMenu,
+    host: renderHost,
+    join: renderJoin,
+    waiting: renderWaiting,
+    placing: renderPlacing,
+    playing: renderPlaying,
+    gameover: renderGameOver,
+    admin: renderAdmin
+  };
+  app.innerHTML = (views[state.view] || renderMenu)();
+  safeIcons();
+  attachListeners();
+}
+
+function renderShell(content, classes = 'p-5') {
+  return `<div class="min-h-full ${classes} slide-up">${content}</div>`;
+}
+
+function renderMenu() {
+  return renderShell(`
+    <div class="min-h-full flex flex-col items-center justify-center">
+      <div class="w-full max-w-md">
+        <div class="text-center mb-9 float-anim">
+          <div class="inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-4 glow-cyan"
+               style="background: linear-gradient(135deg, #06b6d4, #7c3aed);">
+            <i data-lucide="anchor" class="w-12 h-12 text-white"></i>
+          </div>
+          <h1 data-bind="app_title" class="text-4xl font-bold tracking-tight mb-1"
+              style="background: linear-gradient(135deg, #22d3ee, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            ${defaultConfig.app_title}
+          </h1>
+          <p data-bind="app_subtitle" class="text-sm text-cyan-300/70 font-mono uppercase tracking-widest">${defaultConfig.app_subtitle}</p>
+        </div>
+
+        <div class="card-glass p-5 mb-4">
+          <label class="text-xs uppercase tracking-widest text-cyan-300/60 font-mono mb-2 block">Jméno hráče / týmu</label>
+          <input id="player-name" class="input-field" placeholder="Např. Tým Archimédes" value="${escapeHtml(state.playerName)}" maxlength="24" />
+        </div>
+
+        <div class="grid gap-3">
+          <button id="btn-host" class="btn-primary w-full flex items-center justify-center gap-3 pulse-glow">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i><span>Vytvořit novou hru</span>
+          </button>
+          <button id="btn-join" class="btn-secondary w-full flex items-center justify-center gap-3">
+            <i data-lucide="log-in" class="w-5 h-5"></i><span>Přidat se do hry</span>
+          </button>
+          <button id="btn-admin" class="w-full flex items-center justify-center gap-2 py-3 text-purple-300/80 hover:text-purple-300 transition">
+            <i data-lucide="shield" class="w-4 h-4"></i><span class="text-sm font-bold">Učitelská sekce</span>
+          </button>
+        </div>
+
+        <div class="mt-7 grid grid-cols-3 gap-2 text-center text-xs">
+          <div class="card-glass p-3"><p class="font-mono text-cyan-300">2</p><p class="text-cyan-100/50">hráči</p></div>
+          <div class="card-glass p-3"><p class="font-mono text-cyan-300">8×8</p><p class="text-cyan-100/50">mapa</p></div>
+          <div class="card-glass p-3"><p class="font-mono text-cyan-300">${state.storageMode === 'canva' ? 'ONLINE' : 'LOCAL'}</p><p class="text-cyan-100/50">režim</p></div>
+        </div>
+      </div>
+    </div>
+  `);
+}
+
+function renderHost() {
+  const hasTopics = state.allTopics.length > 0;
+  const totalQuestions = state.allTopics.reduce((sum, t) => sum + Number(t.questionCount || 0), 0);
+  return renderShell(`
+    ${topBackHeader('Hostování hry', 'btn-back')}
+    <div class="card-glass p-5 mb-4">
+      <div class="flex gap-3">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center shrink-0">
+          <i data-lucide="info" class="w-5 h-5 text-cyan-300"></i>
+        </div>
+        <div>
+          <h3 class="font-bold mb-1">Jak to funguje?</h3>
+          <p class="text-sm text-cyan-100/65 leading-relaxed">Vytvoř hru a získáš 4místný kód. Žáci si před vytvořením hry vyberou jeden nebo více okruhů, které učitel předem uložil v učitelské sekci.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-glass p-5 mb-4">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <label class="text-xs uppercase tracking-widest text-cyan-300/60 font-mono block">Sada otázek</label>
+        ${hasTopics ? `<span class="text-xs font-mono text-cyan-200/60">${state.allTopics.length} okruhů · ${totalQuestions} otázek</span>` : ''}
+      </div>
+
+      ${!hasTopics ? `
+        <div class="p-4 rounded-2xl bg-yellow-500/10 border border-yellow-500/25 text-yellow-100/85">
+          <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="triangle-alert" class="w-4 h-4"></i> Zatím nejsou vytvořené žádné okruhy</div>
+          <p class="text-sm text-yellow-100/70">Nejdřív přejdi do učitelské sekce, vytvoř okruh otázek z GitHub raw URL a potom se tady objeví žákům k výběru.</p>
+        </div>
+      ` : `
+        <p class="text-sm text-cyan-100/60 mb-3">Vyber jeden okruh, nebo zaškrtni více okruhů a otázky se automaticky spojí do jedné hry.</p>
+        <div class="space-y-2" id="topic-choice-list">
+          ${state.allTopics.map((t, idx) => `
+            <label class="flex items-center gap-3 p-3 rounded-2xl bg-cyan-500/8 border border-cyan-500/20 hover:bg-cyan-500/15 cursor-pointer transition">
+              <input type="checkbox" class="topic-choice w-5 h-5 accent-cyan-400" value="${escapeHtml(t.__backendId)}" ${idx === 0 ? 'checked' : ''}>
+              <span class="flex-1 min-w-0">
+                <span class="block font-bold text-cyan-100 truncate">${escapeHtml(t.topicName)}</span>
+                <span class="block text-xs font-mono text-cyan-300/55">${Number(t.questionCount || 0)} otázek</span>
+              </span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="grid grid-cols-2 gap-2 mt-3">
+          <button id="btn-select-all-topics" class="btn-secondary flex items-center justify-center gap-2 text-sm"><i data-lucide="list-checks" class="w-4 h-4"></i><span>Vybrat vše</span></button>
+          <button id="btn-clear-topics" class="btn-secondary flex items-center justify-center gap-2 text-sm"><i data-lucide="eraser" class="w-4 h-4"></i><span>Vymazat výběr</span></button>
+        </div>
+        <div id="topic-selection-summary" class="mt-3 text-xs font-mono text-cyan-200/60"></div>
+      `}
+    </div>
+
+    <button id="btn-create-game" class="btn-primary w-full flex items-center justify-center gap-2 mt-2" ${hasTopics ? '' : 'disabled'}>
+      <i data-lucide="rocket" class="w-5 h-5"></i><span>Vytvořit hru z vybraných okruhů</span>
+    </button>
+  `);
+}
+
+function renderJoin() {
+  return renderShell(`
+    ${topBackHeader('Přidat se do hry', 'btn-back')}
+    <div class="card-glass p-8 mb-4 text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-pink-500/30 to-purple-500/30 flex items-center justify-center">
+        <i data-lucide="key-round" class="w-8 h-8 text-pink-300"></i>
+      </div>
+      <h3 class="text-lg font-bold mb-2">Zadej kód hry</h3>
+      <p class="text-sm text-cyan-200/60 mb-6">4místný kód od spoluhráče</p>
+      <input id="game-code-input" class="input-field text-center text-3xl font-mono tracking-widest py-5" placeholder="0000" maxlength="4" inputmode="numeric" pattern="[0-9]*" />
+    </div>
+    <button id="btn-join-game" class="btn-primary w-full flex items-center justify-center gap-2">
+      <i data-lucide="log-in" class="w-5 h-5"></i><span>Připojit se</span>
+    </button>
+  `);
+}
+
+function renderWaiting() {
+  const game = state.currentGame;
+  if (!game) return renderMenu();
+  const digits = String(game.gameCode).split('');
+  return renderShell(`
+    <div class="flex items-center mb-6">
+      <button id="btn-cancel-game" class="p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-300"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <h2 class="ml-3 text-xl font-bold">Čekání na hráče</h2>
+    </div>
+    <div class="flex-1 flex flex-col items-center justify-center">
+      <div class="card-glass p-8 w-full max-w-md text-center">
+        <p class="text-xs uppercase tracking-widest text-cyan-300/60 font-mono mb-4">Kód hry</p>
+        <div class="flex justify-center gap-2 mb-6">${digits.map(d => `<div class="code-digit">${d}</div>`).join('')}</div>
+        <button id="btn-copy-code" class="btn-secondary inline-flex items-center gap-2 mb-6"><i data-lucide="copy" class="w-4 h-4"></i><span>Zkopírovat kód</span></button>
+        <div class="border-t border-cyan-500/10 pt-6">
+          <div class="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-cyan-500/10">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-50"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-300"></span>
+            </span>
+            <span class="text-sm text-cyan-200/80">Čekám na soupeře…</span>
+          </div>
+          <p class="mt-4 text-xs text-cyan-300/50 font-mono">Soupeř zadá kód v menu „Přidat se do hry“.</p>
+        </div>
+      </div>
+    </div>
+  `, 'p-5 flex flex-col');
+}
+
+function renderPlacing() {
+  const game = state.currentGame;
+  if (!game) return renderMenu();
+  const myReady = state.playerRole === 'p1' ? game.player1Ready : game.player2Ready;
+  const oppReady = state.playerRole === 'p1' ? game.player2Ready : game.player1Ready;
+
+  return renderShell(`
+    <div class="flex items-center justify-between mb-3">
+      <div>
+        <h2 class="text-lg font-bold">Rozmísti lodě</h2>
+        <p class="text-xs text-cyan-300/60 font-mono">Kód hry: ${escapeHtml(game.gameCode)}</p>
+      </div>
+      <div class="flex items-center gap-2">
+        ${myReady ? '<span class="text-xs px-2 py-1 rounded-md bg-green-500/20 text-green-300 font-mono">TY ✓</span>' : ''}
+        ${oppReady ? '<span class="text-xs px-2 py-1 rounded-md bg-green-500/20 text-green-300 font-mono">SOUPEŘ ✓</span>' : '<span class="text-xs px-2 py-1 rounded-md bg-yellow-500/20 text-yellow-300 font-mono">Soupeř …</span>'}
+      </div>
+    </div>
+
+    <div class="card-glass p-3 mb-3">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-300/60 font-mono">Lodě</span>
+        <button id="btn-orientation" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-xs font-mono">
+          <i data-lucide="rotate-cw" class="w-3 h-3"></i>${state.shipOrientation === 'h' ? 'Vodorovně' : 'Svisle'}
+        </button>
+      </div>
+      <div id="ships-palette" class="grid grid-cols-4 gap-2">${renderShipsPalette()}</div>
+    </div>
+
+    <div class="card-glass p-3 mb-3">
+      <div id="placing-board" class="grid gap-1" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);">
+        ${renderBoard(state.myBoard, 'place', true)}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2 pb-2">
+      <button id="btn-reset-ships" class="btn-secondary flex items-center justify-center gap-2"><i data-lucide="refresh-ccw" class="w-4 h-4"></i><span>Reset</span></button>
+      <button id="btn-random-ships" class="btn-secondary flex items-center justify-center gap-2"><i data-lucide="shuffle" class="w-4 h-4"></i><span>Náhodně</span></button>
+      <button id="btn-ready" class="btn-primary flex items-center justify-center gap-2" ${allShipsPlaced() ? '' : 'disabled'}>
+        <i data-lucide="swords" class="w-4 h-4"></i><span>${myReady ? 'Hotovo' : 'READY'}</span>
+      </button>
+    </div>
+  `, 'p-4');
+}
+
+function renderShipsPalette() {
+  const placed = {};
+  state.placedShips.forEach(s => placed[s.size] = (placed[s.size] || 0) + 1);
+
+  return SHIPS.map(ship => {
+    const usedCount = placed[ship.size] || 0;
+    const remaining = ship.count - usedCount;
+    const disabled = remaining <= 0;
+    const selected = state.selectedShipSize === ship.size && !disabled;
+    return `
+      <button data-ship-size="${ship.size}" class="ship-tile ${selected ? 'selected' : ''} ${disabled ? 'placed' : ''}" ${disabled ? 'disabled' : ''}>
+        <div class="flex gap-0.5 justify-center mb-1">
+          ${Array.from({ length: ship.size }, () => '<div class="ship-block" style="width:10px;height:10px"></div>').join('')}
+        </div>
+        <div class="text-[11px] font-mono text-center text-cyan-200/80">${remaining}/${ship.count}</div>
+        <div class="text-[10px] text-center text-cyan-100/40 truncate">${ship.name}</div>
+      </button>
+    `;
+  }).join('');
+}
+
+function renderBoard(board, mode, coords = false) {
+  let html = '';
+  for (let y = 0; y < BOARD_SIZE; y++) {
+    for (let x = 0; x < BOARD_SIZE; x++) {
+      const v = board[y][x];
+      let cls = 'cell';
+      let content = coords ? `<span class="coord-label">${String.fromCharCode(65 + x)}${y + 1}</span>` : '';
+      let disabled = '';
+
+      if (mode === 'place') {
+        if (v === 1) cls += ' cell-ship';
+      } else if (mode === 'shoot') {
+        if (v === 2) { cls += ' cell-miss'; disabled = 'disabled'; }
+        else if (v === 3) { cls += ' cell-hit'; disabled = 'disabled'; content += '<i data-lucide="flame" class="w-4 h-4 text-yellow-200"></i>'; }
+        else if (v === 4) { cls += ' cell-sunk'; disabled = 'disabled'; content += '<i data-lucide="x" class="w-4 h-4 text-white"></i>'; }
+      } else if (mode === 'own') {
+        if (v === 1) cls += ' cell-ship';
+        else if (v === 2) cls += ' cell-miss';
+        else if (v === 3) { cls += ' cell-hit'; content += '<i data-lucide="flame" class="w-3 h-3 text-yellow-200"></i>'; }
+        else if (v === 4) { cls += ' cell-sunk'; content += '<i data-lucide="x" class="w-3 h-3 text-white"></i>'; }
+      }
+
+      html += `<button class="${cls}" data-x="${x}" data-y="${y}" data-mode="${mode}" ${disabled}>${content}</button>`;
+    }
+  }
+  return html;
+}
+
+function renderPlaying() {
+  const game = state.currentGame;
+  if (!game) return renderMenu();
+
+  const myTurn = game.currentTurn === state.playerRole;
+  const oppBoardData = getOpponentShotsView();
+  const myBoardData = getMyBoardWithShots();
+  const myScore = state.playerRole === 'p1' ? (game.player1Score || 0) : (game.player2Score || 0);
+  const oppScore = state.playerRole === 'p1' ? (game.player2Score || 0) : (game.player1Score || 0);
+  const myName = state.playerRole === 'p1' ? game.player1Name : game.player2Name;
+  const oppName = state.playerRole === 'p1' ? game.player2Name : game.player1Name;
+
+  return renderShell(`
+    <div class="flex items-center justify-between mb-3 px-1">
+      <div class="flex-1 min-w-0">
+        <p class="text-[10px] font-mono text-cyan-300/60 uppercase">Ty</p>
+        <p class="text-sm font-bold text-cyan-300 truncate">${escapeHtml(myName)}</p>
+        <p class="text-lg font-bold font-mono">${myScore}</p>
+      </div>
+      <div class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30">
+        <span class="text-[10px] font-mono text-cyan-300">VS</span>
+      </div>
+      <div class="flex-1 min-w-0 text-right">
+        <p class="text-[10px] font-mono text-pink-300/60 uppercase">Soupeř</p>
+        <p class="text-sm font-bold text-pink-300 truncate">${escapeHtml(oppName)}</p>
+        <p class="text-lg font-bold font-mono">${oppScore}</p>
+      </div>
+    </div>
+
+    <div class="mb-3 py-3 px-4 rounded-2xl text-center font-bold ${myTurn ? 'bg-cyan-500/20 border border-cyan-500/50 turn-indicator' : 'bg-pink-500/10 border border-pink-500/30'}">
+      ${myTurn
+        ? `<div class="flex items-center justify-center gap-2"><i data-lucide="crosshair" class="w-5 h-5 text-cyan-300"></i><span class="text-cyan-300">${game.shotsRemaining > 0 ? `STŘÍLEJ · ${game.shotsRemaining}×` : 'ODPOVĚZ NA OTÁZKU'}</span></div>`
+        : `<div class="flex items-center justify-center gap-2"><div class="loader" style="width:16px;height:16px"></div><span class="text-pink-300">Soupeř je na tahu…</span></div>`
+      }
+    </div>
+
+    <div class="card-glass p-3 mb-3">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs uppercase tracking-wider text-pink-300/70 font-mono flex items-center gap-1.5">
+          <i data-lucide="target" class="w-3.5 h-3.5"></i>Nepřátelské vody
+        </span>
+        <span class="text-xs font-mono text-cyan-200/50">${myTurn ? 'Střílej sem' : 'Čekej'}</span>
+      </div>
+      <div id="opponent-board" class="grid gap-1" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);">
+        ${renderBoard(oppBoardData, 'shoot', true)}
+      </div>
+    </div>
+
+    <div class="card-glass p-3 mb-3">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-300/70 font-mono flex items-center gap-1.5">
+          <i data-lucide="ship" class="w-3.5 h-3.5"></i>Moje flotila
+        </span>
+      </div>
+      <div class="grid gap-1" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);">
+        ${renderBoard(myBoardData, 'own')}
+      </div>
+    </div>
+
+    ${game.currentQuestion && myTurn && !state.questionAnswered && game.shotsRemaining <= 0 ? renderQuestionModal() : ''}
+  `, 'p-3');
+}
+
+function renderQuestionModal() {
+  const game = state.currentGame;
+  let question;
+  try { question = JSON.parse(game.currentQuestion); }
+  catch { return ''; }
+
+  const answers = Object.entries(question.moznosti || {});
+  return `
+    <div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+      <div class="question-card w-full max-w-md rounded-3xl p-6 slide-up max-h-[92dvh] overflow-y-auto">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/30 flex items-center justify-center">
+            <i data-lucide="brain" class="w-4 h-4 text-purple-200"></i>
+          </div>
+          <span class="text-xs uppercase tracking-widest text-purple-300 font-mono">Otázka</span>
+        </div>
+        <h3 class="text-lg font-bold mb-5 leading-relaxed">${escapeHtml(question.otazka)}</h3>
+        <div class="space-y-2">
+          ${answers.map(([key, value]) => `
+            <button data-answer="${escapeHtml(key)}" class="answer-btn flex items-center gap-3">
+              <span class="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center font-mono text-xs font-bold text-purple-200 shrink-0">${escapeHtml(key).toUpperCase()}</span>
+              <span>${escapeHtml(value)}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div class="mt-4 pt-4 border-t border-purple-500/20 text-center">
+          <p class="text-xs font-mono text-purple-300/70">✓ správně = 2 výstřely · ✗ špatně = 1 výstřel</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderGameOver() {
+  const game = state.currentGame;
+  if (!game) return renderMenu();
+  const iWon = game.winner === state.playerRole;
+  const myScore = state.playerRole === 'p1' ? (game.player1Score || 0) : (game.player2Score || 0);
+  const oppScore = state.playerRole === 'p1' ? (game.player2Score || 0) : (game.player1Score || 0);
+
+  return renderShell(`
+    <div class="min-h-full flex flex-col items-center justify-center">
+      <div class="w-full max-w-md text-center">
+        <div class="w-32 h-32 mx-auto mb-6 float-anim rounded-full flex items-center justify-center ${iWon ? 'glow-cyan bg-gradient-to-br from-cyan-400 to-blue-600' : 'glow-pink bg-gradient-to-br from-pink-500 to-purple-700'}">
+          <i data-lucide="${iWon ? 'trophy' : 'heart-crack'}" class="w-16 h-16 text-white"></i>
+        </div>
+        <h1 class="text-4xl font-bold mb-2" style="background: linear-gradient(135deg, ${iWon ? '#22d3ee, #3b82f6' : '#ec4899, #a855f7'}); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          ${iWon ? 'VÍTĚZSTVÍ!' : 'PORÁŽKA'}
+        </h1>
+        <p class="text-cyan-200/70 mb-8">${iWon ? 'Všechny nepřátelské lodě potopeny! 🎉' : 'Tvoje flotila byla zničena…'}</p>
+        <div class="card-glass p-5 mb-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div><p class="text-xs font-mono text-cyan-300/60 uppercase mb-1">Ty</p><p class="text-3xl font-bold font-mono">${myScore}</p><p class="text-xs text-cyan-200/60">zásahů</p></div>
+            <div><p class="text-xs font-mono text-pink-300/60 uppercase mb-1">Soupeř</p><p class="text-3xl font-bold font-mono">${oppScore}</p><p class="text-xs text-pink-200/60">zásahů</p></div>
+          </div>
+        </div>
+        <button id="btn-back-menu" class="btn-primary w-full flex items-center justify-center gap-2">
+          <i data-lucide="home" class="w-5 h-5"></i><span>Zpět na hlavní menu</span>
+        </button>
+      </div>
+    </div>
+  `);
+}
+
+function renderAdmin() {
+  if (!state.adminAuthenticated) return renderAdminLogin();
+
+  const activeGames = state.allGames.filter(g => g.status !== 'finished');
+  return renderShell(`
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center">
+        <button id="btn-logout" class="p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-300"><i data-lucide="log-out" class="w-5 h-5"></i></button>
+        <div class="ml-3">
+          <h2 class="text-xl font-bold">Učitelská sekce</h2>
+          <p class="text-xs font-mono text-purple-300/60 uppercase tracking-widest">Admin panel · ${state.storageMode === 'canva' ? 'Canva online' : 'Lokální režim'}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-2 mb-4 overflow-x-auto pb-1">
+      ${adminTabButton('topics', '📚 Okruhy')}
+      ${adminTabButton('tester', '🧪 Tester')}
+      ${adminTabButton('games', '🎮 Hry')}
+    </div>
+
+    <div id="topics-tab" class="${state.activeAdminTab === 'topics' ? '' : 'hidden'}">
+      <div class="card-glass p-5 mb-4">
+        <div class="flex items-center gap-2 mb-3"><i data-lucide="plus-circle" class="w-5 h-5 text-purple-300"></i><h3 class="font-bold">Nový okruh z URL</h3></div>
+        <input id="topic-name" class="input-field mb-3" placeholder="Název okruhu, např. Hustota" />
+        <input id="topic-url" class="input-field mb-3" placeholder="GitHub raw URL s otázkami" value="${DEFAULT_QUESTIONS_URL}" />
+        <button id="btn-create-topic" class="btn-primary w-full flex items-center justify-center gap-2"><i data-lucide="save" class="w-4 h-4"></i><span>Načíst a uložit okruh</span></button>
+      </div>
+
+      <p class="text-xs uppercase tracking-widest text-purple-300/60 font-mono mb-3 px-1">Existující okruhy (${state.allTopics.length})</p>
+      ${state.allTopics.length === 0 ? `
+        <div class="card-glass p-6 text-center text-purple-200/50">
+          <i data-lucide="inbox" class="w-8 h-8 mx-auto mb-2 text-purple-300/30"></i><p class="text-sm">Zatím žádné okruhy.</p>
+        </div>
+      ` : `<div class="space-y-2">${state.allTopics.map(t => `
+        <div class="card-glass p-4 flex items-center justify-between gap-3">
+          <div class="min-w-0">
+            <p class="font-bold text-purple-100 truncate">${escapeHtml(t.topicName)}</p>
+            <p class="text-xs text-purple-300/60 font-mono">${t.questionCount || 0} otázek</p>
+          </div>
+          <button data-topic-id="${t.__backendId}" class="btn-delete p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-300 shrink-0"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>
+      `).join('')}</div>`}
+    </div>
+
+    <div id="tester-tab" class="${state.activeAdminTab === 'tester' ? '' : 'hidden'}">
+      <div class="card-glass p-5 mb-4">
+        <div class="flex items-center gap-2 mb-3"><i data-lucide="github" class="w-5 h-5 text-purple-300"></i><h3 class="font-bold">Načíst z URL</h3></div>
+        <input id="admin-url" class="input-field mb-3" placeholder="https://raw.githubusercontent.com/..." value="${DEFAULT_QUESTIONS_URL}" />
+        <button id="btn-test-url" class="btn-secondary w-full flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i><span>Načíst a otestovat</span></button>
+        <div id="admin-result" class="mt-3"></div>
+      </div>
+
+      <div class="card-glass p-5 mb-4">
+        <div class="flex items-center gap-2 mb-3"><i data-lucide="copy" class="w-5 h-5 text-purple-300"></i><h3 class="font-bold">Vložit JSON přímo</h3></div>
+        <textarea id="admin-json-paste" class="input-field font-mono text-xs mb-3" placeholder='[{"id":1,"otazka":"...","moznosti":{"a":"...","b":"...","c":"...","d":"..."},"spravna_odpoved":"a"}]'></textarea>
+        <button id="btn-validate-json" class="btn-secondary w-full flex items-center justify-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i><span>Ověřit JSON</span></button>
+        <div id="admin-json-result" class="mt-3"></div>
+      </div>
+
+      <div class="card-glass p-5">
+        <h3 class="font-bold mb-3">Správný formát</h3>
+        <pre class="text-xs font-mono bg-black/40 p-3 rounded-lg overflow-x-auto text-cyan-100/80">[
+  {
+    "id": 1,
+    "otazka": "Kterým písmenem značíme hustotu?",
+    "moznosti": {
+      "a": "ρ",
+      "b": "σ",
+      "c": "ω",
+      "d": "δ"
+    },
+    "spravna_odpoved": "a"
+  }
+]</pre>
+      </div>
+    </div>
+
+    <div id="games-tab" class="${state.activeAdminTab === 'games' ? '' : 'hidden'}">
+      <div class="card-glass p-5">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2"><i data-lucide="gamepad-2" class="w-5 h-5 text-purple-300"></i><h3 class="font-bold">Aktivní hry</h3></div>
+          <span class="text-xs font-mono px-2 py-1 rounded-md bg-purple-500/20 text-purple-300">${activeGames.length}</span>
+        </div>
+        ${activeGames.length === 0 ? `<p class="text-sm text-purple-200/50 text-center py-6">Žádné aktivní hry</p>` : `
+          <div class="space-y-2">${activeGames.map(g => `
+            <div class="flex items-center justify-between p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 gap-3">
+              <div><p class="font-mono text-lg font-bold text-cyan-300">${escapeHtml(g.gameCode)}</p><p class="text-xs text-purple-200/60">${escapeHtml(g.player1Name || '?')} vs ${escapeHtml(g.player2Name || 'čeká')}</p></div>
+              <span class="text-xs font-mono px-2 py-1 rounded-md ${g.status === 'waiting' ? 'bg-yellow-500/20 text-yellow-300' : g.status === 'placing' ? 'bg-blue-500/20 text-blue-300' : 'bg-green-500/20 text-green-300'}">${escapeHtml(g.status).toUpperCase()}</span>
+            </div>
+          `).join('')}</div>`}
+      </div>
+    </div>
+  `);
+}
+
+function renderAdminLogin() {
+  return renderShell(`
+    <div class="min-h-full flex flex-col items-center justify-center">
+      <div class="w-full max-w-md">
+        <div class="w-24 h-24 mx-auto mb-6 float-anim rounded-3xl bg-gradient-to-br from-purple-500/40 to-pink-500/40 flex items-center justify-center glow-pink">
+          <i data-lucide="lock" class="w-12 h-12 text-pink-300"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-center mb-2">Učitelská sekce</h2>
+        <p class="text-sm text-purple-200/60 text-center mb-8">Heslo: 579</p>
+        <div class="card-glass p-6 mb-4">
+          <label class="text-xs uppercase tracking-widest text-purple-300/60 font-mono mb-3 block">Heslo</label>
+          <input id="admin-password" type="password" class="input-field mb-4" placeholder="Zadej heslo" autocomplete="off" />
+          <button id="btn-admin-login" class="btn-primary w-full flex items-center justify-center gap-2"><i data-lucide="unlock" class="w-5 h-5"></i><span>Přihlásit se</span></button>
+        </div>
+        <button id="btn-back" class="btn-secondary w-full flex items-center justify-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i><span>Zpět na menu</span></button>
+      </div>
+    </div>
+  `);
+}
+
+function topBackHeader(title, id) {
+  return `
+    <div class="flex items-center mb-6">
+      <button id="${id}" class="p-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20"><i data-lucide="arrow-left" class="w-5 h-5"></i></button>
+      <h2 class="ml-3 text-xl font-bold">${escapeHtml(title)}</h2>
+    </div>
+  `;
+}
+
+function adminTabButton(tab, label) {
+  return `<button data-tab="${tab}" class="px-4 py-2 rounded-lg font-bold text-sm border border-purple-500/20 text-purple-200/70 ${state.activeAdminTab === tab ? 'tab-active' : 'bg-purple-500/10'}">${label}</button>`;
+}
+
+/* ===================== BOARDS ===================== */
+
+function allShipsPlaced() {
+  return state.placedShips.length === SHIPS.reduce((s, sh) => s + sh.count, 0);
+}
+
+function canPlaceShip(x, y, size, orientation) {
+  for (let i = 0; i < size; i++) {
+    const cx = orientation === 'h' ? x + i : x;
+    const cy = orientation === 'h' ? y : y + i;
+    if (cx < 0 || cx >= BOARD_SIZE || cy < 0 || cy >= BOARD_SIZE) return false;
+
+    for (let dy = -1; dy <= 1; dy++) {
+      for (let dx = -1; dx <= 1; dx++) {
+        const nx = cx + dx, ny = cy + dy;
+        if (nx >= 0 && nx < BOARD_SIZE && ny >= 0 && ny < BOARD_SIZE && state.myBoard[ny][nx] === 1) return false;
+      }
+    }
+  }
+  return true;
+}
+
+function placeShip(x, y, size, orientation) {
+  const cells = [];
+  for (let i = 0; i < size; i++) {
+    const cx = orientation === 'h' ? x + i : x;
+    const cy = orientation === 'h' ? y : y + i;
+    state.myBoard[cy][cx] = 1;
+    cells.push([cx, cy]);
+  }
+  state.placedShips.push({ size, cells });
+}
+
+function resetShips() {
+  state.myBoard = createEmptyBoard();
+  state.placedShips = [];
+  state.selectedShipSize = null;
+}
+
+function randomPlaceShips() {
+  resetShips();
+  for (const ship of SHIPS) {
+    for (let n = 0; n < ship.count; n++) {
+      let placed = false;
+      for (let tries = 0; tries < 500 && !placed; tries++) {
+        const orientation = Math.random() < .5 ? 'h' : 'v';
+        const x = Math.floor(Math.random() * BOARD_SIZE);
+        const y = Math.floor(Math.random() * BOARD_SIZE);
+        if (canPlaceShip(x, y, ship.size, orientation)) {
+          placeShip(x, y, ship.size, orientation);
+          placed = true;
+        }
+      }
+      if (!placed) {
+        toast('Náhodné rozmístění se nepovedlo. Zkus to znovu.', 'error');
+        resetShips();
+        return;
+      }
+    }
+  }
+}
+
+/* ===================== GAME ACTIONS ===================== */
+
+async function createGame() {
+  if (!state.playerName.trim()) { toast('Zadej jméno hráče nebo týmu.', 'error'); return; }
+
+  const btn = document.getElementById('btn-create-game');
+  const selectedTopicIds = Array.from(document.querySelectorAll('.topic-choice:checked')).map(el => el.value);
+
+  if (selectedTopicIds.length === 0) {
+    toast('Vyber alespoň jeden okruh otázek.', 'error');
+    return;
+  }
+
+  let questions = [];
+  const usedQuestionKeys = new Set();
+  const selectedTopicNames = [];
+
+  try {
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = '<div class="loader"></div><span>Spojuji vybrané okruhy…</span>';
+    }
+
+    for (const topicId of selectedTopicIds) {
+      const topic = state.allTopics.find(t => t.__backendId === topicId);
+      if (!topic) throw new Error('Jeden z vybraných okruhů už neexistuje.');
+
+      selectedTopicNames.push(topic.topicName || 'Okruh');
+      const topicQuestions = normalizeQuestions(JSON.parse(topic.questionsData));
+
+      for (const q of topicQuestions) {
+        // Jednoduché odstranění duplicit podle textu otázky a správné odpovědi.
+        const uniqueKey = `${q.otazka.trim().toLowerCase()}|${q.spravna_odpoved}`;
+        if (!usedQuestionKeys.has(uniqueKey)) {
+          usedQuestionKeys.add(uniqueKey);
+          questions.push({ ...q, id: questions.length + 1 });
+        }
+      }
+    }
+
+    if (questions.length === 0) throw new Error('Vybrané okruhy neobsahují žádné platné otázky.');
+  } catch (e) {
+    toast(e.message || 'Otázky se nepodařilo připravit.', 'error');
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<i data-lucide="rocket" class="w-5 h-5"></i><span>Vytvořit hru z vybraných okruhů</span>';
+      safeIcons();
+    }
+    return;
+  }
+
+  let code, attempts = 0;
+  do {
+    code = generateGameCode();
+    attempts++;
+  } while (state.allGames.some(g => g.gameCode === code && g.status !== 'finished') && attempts < 100);
+
+  const newGame = {
+    type: 'game',
+    gameCode: code,
+    status: 'waiting',
+    player1Name: state.playerName.trim(),
+    player2Name: '',
+    player1Board: JSON.stringify(createEmptyBoard()),
+    player2Board: JSON.stringify(createEmptyBoard()),
+    player1Shots: JSON.stringify(createEmptyBoard()),
+    player2Shots: JSON.stringify(createEmptyBoard()),
+    player1Ready: false,
+    player2Ready: false,
+    currentTurn: 'p1',
+    questionsJson: JSON.stringify(questions),
+    topicNames: selectedTopicNames.join(', '),
+    currentQuestion: '',
+    shotsRemaining: 0,
+    winner: '',
+    player1Score: 0,
+    player2Score: 0,
+    createdAt: new Date().toISOString(),
+    lastAction: ''
+  };
+
+  if (btn) btn.innerHTML = '<div class="loader"></div><span>Vytvářím hru…</span>';
+  const result = await store.create(newGame);
+
+  if (result.isOk) {
+    const created = result.record || state.allGames.find(g => g.gameCode === code) || { ...newGame, __backendId: newGame.__backendId };
+    state.currentGame = created;
+    state.playerRole = 'p1';
+    state.questions = questions;
+    state.view = 'waiting';
+    resetShips();
+    toast(`Hra vytvořena z ${selectedTopicIds.length} okruhů (${questions.length} otázek).`, 'success');
+    render();
+  } else {
+    toast('Hru se nepodařilo vytvořit.', 'error');
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<i data-lucide="rocket" class="w-5 h-5"></i><span>Vytvořit hru z vybraných okruhů</span>';
+      safeIcons();
+    }
+  }
+}
+
+async function joinGame() {
+  const code = document.getElementById('game-code-input')?.value.trim();
+  if (!state.playerName.trim()) { toast('Nejdřív zadej jméno v hlavním menu.', 'error'); return; }
+  if (!/^\d{4}$/.test(code)) { toast('Zadej 4místný kód.', 'error'); return; }
+
+  const game = state.allGames.find(g => g.gameCode === code && g.status === 'waiting');
+  if (!game) { toast('Hra s tímto kódem neexistuje nebo už začala.', 'error'); return; }
+
+  const updated = { ...game, player2Name: state.playerName.trim(), status: 'placing' };
+  const result = await store.update(updated);
+  if (result.isOk) {
+    state.currentGame = updated;
+    state.playerRole = 'p2';
+    state.view = 'placing';
+    resetShips();
+    try { state.questions = normalizeQuestions(JSON.parse(game.questionsJson)); } catch {}
+    render();
+  } else {
+    toast('Připojení se nepodařilo.', 'error');
+  }
+}
+
+async function setReady() {
+  if (!allShipsPlaced()) { toast('Nejdřív rozmísti všechny lodě.', 'error'); return; }
+
+  const game = state.currentGame;
+  const updated = { ...game };
+
+  if (state.playerRole === 'p1') {
+    updated.player1Board = JSON.stringify(state.myBoard);
+    updated.player1Ready = true;
+  } else {
+    updated.player2Board = JSON.stringify(state.myBoard);
+    updated.player2Ready = true;
+  }
+
+  if (updated.player1Ready && updated.player2Ready) {
+    updated.status = 'playing';
+    updated.currentTurn = Math.random() < .5 ? 'p1' : 'p2';
+    updated.currentQuestion = pickRandomQuestion();
+    updated.shotsRemaining = 0;
+  }
+
+  const result = await store.update(updated);
+  if (result.isOk) {
+    state.currentGame = updated;
+    if (updated.status === 'playing') state.view = 'playing';
+    render();
+  } else {
+    toast('Stav se nepodařilo uložit.', 'error');
+  }
+}
+
+function pickRandomQuestion() {
+  const pool = state.questions.length ? state.questions : normalizeQuestions(DEFAULT_QUESTIONS);
+  let q = pool[Math.floor(Math.random() * pool.length)];
+
+  if (pool.length > 3) {
+    for (let i = 0; i < 12 && state.lastQuestionIds.includes(String(q.id)); i++) {
+      q = pool[Math.floor(Math.random() * pool.length)];
+    }
+    state.lastQuestionIds.push(String(q.id));
+    if (state.lastQuestionIds.length > Math.min(6, pool.length - 1)) state.lastQuestionIds.shift();
+  }
+
+  return JSON.stringify(q);
+}
+
+async function answerQuestion(answerKey) {
+  const game = state.currentGame;
+  let q;
+  try { q = JSON.parse(game.currentQuestion); }
+  catch { return; }
+
+  const chosen = asStringKey(answerKey);
+  const correctKey = asStringKey(q.spravna_odpoved);
+  const correct = chosen === correctKey;
+
+  state.questionAnswered = true;
+
+  document.querySelectorAll('[data-answer]').forEach(btn => {
+    btn.disabled = true;
+    const key = asStringKey(btn.dataset.answer);
+    if (key === correctKey) btn.classList.add('answer-correct');
+    else if (key === chosen && !correct) btn.classList.add('answer-wrong');
+  });
+
+  await new Promise(r => setTimeout(r, 900));
+
+  const updated = { ...game, shotsRemaining: correct ? 2 : 1, currentQuestion: '', lastAction: `${state.playerRole} answered ${correct ? 'correct' : 'wrong'}` };
+  const result = await store.update(updated);
+
+  if (result.isOk) {
+    state.currentGame = updated;
+    state.questionAnswered = false;
+    toast(correct ? 'Správně! Máš 2 výstřely.' : 'Špatně. Máš 1 výstřel.', correct ? 'success' : 'error');
+    render();
+  } else {
+    toast('Odpověď se nepodařilo uložit.', 'error');
+  }
+}
+
+async function fireShot(x, y) {
+  const game = state.currentGame;
+  if (!game || game.currentTurn !== state.playerRole) return;
+  if (game.shotsRemaining <= 0) { toast('Nejdřív odpověz na otázku.', 'info'); return; }
+
+  const myShotsStr = state.playerRole === 'p1' ? game.player1Shots : game.player2Shots;
+  const oppBoardStr = state.playerRole === 'p1' ? game.player2Board : game.player1Board;
+
+  let myShots, oppBoard;
+  try {
+    myShots = JSON.parse(myShotsStr);
+    oppBoard = JSON.parse(oppBoardStr);
+  } catch {
+    toast('Chyba dat hry.', 'error');
+    return;
+  }
+
+  if (myShots[y][x] !== 0) { toast('Na toto pole už jsi střílel.', 'error'); return; }
+
+  const hit = oppBoard[y][x] === 1;
+  myShots[y][x] = hit ? 3 : 2;
+
+  if (hit) {
+    const sunkCells = checkSunkShip(x, y, oppBoard, myShots);
+    if (sunkCells) {
+      sunkCells.forEach(([cx, cy]) => myShots[cy][cx] = 4);
+      toast('Loď potopena! 🔥', 'success');
+    } else {
+      toast('Zásah! 💥', 'success');
+    }
+  } else {
+    toast('Vedle… 💦', 'info');
+  }
+
+  const updated = { ...game };
+  if (state.playerRole === 'p1') {
+    updated.player1Shots = JSON.stringify(myShots);
+    updated.player1Score = (game.player1Score || 0) + (hit ? 1 : 0);
+  } else {
+    updated.player2Shots = JSON.stringify(myShots);
+    updated.player2Score = (game.player2Score || 0) + (hit ? 1 : 0);
+  }
+
+  updated.shotsRemaining = game.shotsRemaining - 1;
+
+  const allShipCells = [];
+  for (let yy = 0; yy < BOARD_SIZE; yy++) {
+    for (let xx = 0; xx < BOARD_SIZE; xx++) {
+      if (oppBoard[yy][xx] === 1) allShipCells.push([xx, yy]);
+    }
+  }
+  const allHit = allShipCells.length > 0 && allShipCells.every(([cx, cy]) => myShots[cy][cx] === 3 || myShots[cy][cx] === 4);
+
+  if (allHit) {
+    updated.status = 'finished';
+    updated.winner = state.playerRole;
+  } else if (updated.shotsRemaining <= 0) {
+    updated.currentTurn = state.playerRole === 'p1' ? 'p2' : 'p1';
+    updated.currentQuestion = pickRandomQuestion();
+  }
+
+  const result = await store.update(updated);
+  if (result.isOk) {
+    state.currentGame = updated;
+    if (updated.status === 'finished') state.view = 'gameover';
+    render();
+  } else {
+    toast('Výstřel se nepodařilo uložit.', 'error');
+  }
+}
+
+function checkSunkShip(hitX, hitY, oppBoard, shots) {
+  const visited = new Set();
+  const stack = [[hitX, hitY]];
+  const shipCells = [];
+
+  while (stack.length) {
+    const [x, y] = stack.pop();
+    const key = `${x},${y}`;
+    if (visited.has(key)) continue;
+    if (x < 0 || x >= BOARD_SIZE || y < 0 || y >= BOARD_SIZE) continue;
+    if (oppBoard[y][x] !== 1) continue;
+    visited.add(key);
+    shipCells.push([x, y]);
+    stack.push([x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1]);
+  }
+
+  return shipCells.every(([x, y]) => shots[y][x] === 3 || shots[y][x] === 4) ? shipCells : null;
+}
+
+function getOpponentShotsView() {
+  const game = state.currentGame;
+  const shotsStr = state.playerRole === 'p1' ? game.player1Shots : game.player2Shots;
+  try { return JSON.parse(shotsStr); } catch { return createEmptyBoard(); }
+}
+
+function getMyBoardWithShots() {
+  const game = state.currentGame;
+  const myBoardStr = state.playerRole === 'p1' ? game.player1Board : game.player2Board;
+  const oppShotsStr = state.playerRole === 'p1' ? game.player2Shots : game.player1Shots;
+
+  let myBoard = createEmptyBoard();
+  let oppShots = createEmptyBoard();
+  try { myBoard = JSON.parse(myBoardStr); } catch {}
+  try { oppShots = JSON.parse(oppShotsStr); } catch {}
+
+  const merged = createEmptyBoard();
+  for (let y = 0; y < BOARD_SIZE; y++) {
+    for (let x = 0; x < BOARD_SIZE; x++) {
+      if (oppShots[y][x] === 2) merged[y][x] = 2;
+      else if (oppShots[y][x] === 3) merged[y][x] = 3;
+      else if (oppShots[y][x] === 4) merged[y][x] = 4;
+      else if (myBoard[y][x] === 1) merged[y][x] = 1;
+    }
+  }
+  return merged;
+}
+
+async function cancelGame() {
+  if (state.currentGame) await store.delete(state.currentGame);
+  resetState();
+  render();
+}
+
+function resetState() {
+  state.currentGame = null;
+  state.playerRole = null;
+  state.myBoard = createEmptyBoard();
+  state.placedShips = [];
+  state.selectedShipSize = null;
+  state.questionAnswered = false;
+  state.lastQuestionIds = [];
+  state.view = 'menu';
+}
+
+/* ===================== ADMIN ACTIONS ===================== */
+
+async function createTopicFromUrl() {
+  const name = document.getElementById('topic-name')?.value.trim();
+  const url = document.getElementById('topic-url')?.value.trim();
+  const btn = document.getElementById('btn-create-topic');
+
+  if (!name) { toast('Zadej název okruhu.', 'error'); return; }
+  if (!url) { toast('Zadej URL.', 'error'); return; }
+
+  try {
+    btn.disabled = true;
+    btn.innerHTML = '<div class="loader"></div><span>Načítám…</span>';
+    const questions = await loadQuestionsFromUrl(url);
+
+    const topic = {
+      type: 'topic',
+      topicName: name,
+      questionsData: JSON.stringify(questions),
+      questionCount: questions.length,
+      sourceUrl: url,
+      createdAt: new Date().toISOString()
+    };
+
+    const result = await store.create(topic);
+    if (result.isOk) {
+      toast(`Okruh uložen: ${name} (${questions.length} otázek)`, 'success');
+      render();
+    } else {
+      throw new Error('Okruh se nepodařilo uložit.');
+    }
+  } catch (e) {
+    toast(e.message || 'Okruh se nepodařilo vytvořit.', 'error');
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<i data-lucide="save" class="w-4 h-4"></i><span>Načíst a uložit okruh</span>';
+      safeIcons();
+    }
+  }
+}
+
+/* ===================== EVENT LISTENERS ===================== */
+
+function attachListeners() {
+  const nameInput = document.getElementById('player-name');
+  if (nameInput) {
+    nameInput.oninput = e => state.playerName = e.target.value.trim();
+  }
+
+  const btnHost = document.getElementById('btn-host');
+  if (btnHost) btnHost.onclick = () => {
+    if (!state.playerName.trim()) { toast('Zadej své jméno nebo název týmu.', 'error'); return; }
+    state.view = 'host';
+    render();
+  };
+
+  const btnJoin = document.getElementById('btn-join');
+  if (btnJoin) btnJoin.onclick = () => {
+    if (!state.playerName.trim()) { toast('Zadej své jméno nebo název týmu.', 'error'); return; }
+    state.view = 'join';
+    render();
+  };
+
+  const btnAdmin = document.getElementById('btn-admin');
+  if (btnAdmin) btnAdmin.onclick = () => { state.view = 'admin'; render(); };
+
+  document.querySelectorAll('#btn-back').forEach(btn => btn.onclick = () => { state.view = 'menu'; render(); });
+
+  const qSet = document.getElementById('question-set');
+  if (qSet) {
+    qSet.onchange = e => {
+      const val = e.target.value;
+      document.getElementById('custom-url-wrap')?.classList.toggle('hidden', val !== 'custom-url');
+      document.getElementById('custom-json-wrap')?.classList.toggle('hidden', val !== 'custom-json');
+    };
+  }
+
+
+  document.querySelectorAll('.topic-choice').forEach(ch => {
+    ch.onchange = updateTopicSelectionSummary;
+  });
+  const btnSelectAllTopics = document.getElementById('btn-select-all-topics');
+  if (btnSelectAllTopics) btnSelectAllTopics.onclick = () => {
+    document.querySelectorAll('.topic-choice').forEach(ch => ch.checked = true);
+    updateTopicSelectionSummary();
+  };
+  const btnClearTopics = document.getElementById('btn-clear-topics');
+  if (btnClearTopics) btnClearTopics.onclick = () => {
+    document.querySelectorAll('.topic-choice').forEach(ch => ch.checked = false);
+    updateTopicSelectionSummary();
+  };
+  updateTopicSelectionSummary();
+
+  const btnHostTestUrl = document.getElementById('btn-host-test-url');
+  if (btnHostTestUrl) btnHostTestUrl.onclick = async () => {
+    const resultEl = document.getElementById('url-result');
+    resultEl.innerHTML = '<div class="flex items-center gap-2 text-cyan-300"><div class="loader" style="width:14px;height:14px"></div>Načítám…</div>';
+    try {
+      const qs = await loadQuestionsFromUrl(document.getElementById('questions-url')?.value);
+      resultEl.innerHTML = prettyQuestionResult(qs);
+      safeIcons();
+    } catch (e) {
+      resultEl.innerHTML = `<div class="p-3 rounded-xl bg-red-500/15 border border-red-500/30 text-xs text-red-300">${escapeHtml(e.message)}</div>`;
+    }
+  };
+
+  const btnHostTestJson = document.getElementById('btn-host-test-json');
+  if (btnHostTestJson) btnHostTestJson.onclick = () => {
+    const resultEl = document.getElementById('json-result');
+    try {
+      const qs = normalizeQuestions(JSON.parse(document.getElementById('questions-json-paste')?.value || ''));
+      resultEl.innerHTML = prettyQuestionResult(qs);
+      safeIcons();
+    } catch (e) {
+      resultEl.innerHTML = `<div class="p-3 rounded-xl bg-red-500/15 border border-red-500/30 text-xs text-red-300">${escapeHtml(e.message)}</div>`;
+    }
+  };
+
+  const btnCreate = document.getElementById('btn-create-game');
+  if (btnCreate) btnCreate.onclick = createGame;
+
+  const codeInput = document.getElementById('game-code-input');
+  if (codeInput) codeInput.oninput = e => e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+
+  const btnJoinGame = document.getElementById('btn-join-game');
+  if (btnJoinGame) btnJoinGame.onclick = joinGame;
+
+  const btnCancel = document.getElementById('btn-cancel-game');
+  if (btnCancel) btnCancel.onclick = cancelGame;
+
+  const btnCopy = document.getElementById('btn-copy-code');
+  if (btnCopy) btnCopy.onclick = () => {
+    const code = state.currentGame?.gameCode || '';
+    if (navigator.clipboard) navigator.clipboard.writeText(code).then(() => toast('Kód zkopírován.', 'success'));
+    else toast(`Kód hry: ${code}`, 'info');
+  };
+
+  document.querySelectorAll('[data-ship-size]').forEach(btn => {
+    btn.onclick = () => {
+      const size = Number(btn.dataset.shipSize);
+      state.selectedShipSize = state.selectedShipSize === size ? null : size;
+      render();
+    };
+  });
+
+  const btnOri = document.getElementById('btn-orientation');
+  if (btnOri) btnOri.onclick = () => {
+    state.shipOrientation = state.shipOrientation === 'h' ? 'v' : 'h';
+    render();
+  };
+
+  const btnReset = document.getElementById('btn-reset-ships');
+  if (btnReset) btnReset.onclick = () => { resetShips(); render(); };
+
+  const btnRandom = document.getElementById('btn-random-ships');
+  if (btnRandom) btnRandom.onclick = () => { randomPlaceShips(); render(); };
+
+  const btnReady = document.getElementById('btn-ready');
+  if (btnReady) btnReady.onclick = setReady;
+
+  document.querySelectorAll('[data-mode="place"]').forEach(cell => {
+    cell.onclick = () => {
+      if (!state.selectedShipSize) { toast('Nejdřív vyber loď.', 'info'); return; }
+      const x = Number(cell.dataset.x), y = Number(cell.dataset.y);
+      if (!canPlaceShip(x, y, state.selectedShipSize, state.shipOrientation)) {
+        toast('Sem loď umístit nelze.', 'error');
+        return;
+      }
+      const size = state.selectedShipSize;
+      placeShip(x, y, size, state.shipOrientation);
+      const placed = state.placedShips.filter(s => s.size === size).length;
+      const max = SHIPS.find(s => s.size === size).count;
+      if (placed >= max) state.selectedShipSize = null;
+      render();
+    };
+
+    cell.onmouseenter = () => {
+      if (!state.selectedShipSize) return;
+      const x = Number(cell.dataset.x), y = Number(cell.dataset.y);
+      const valid = canPlaceShip(x, y, state.selectedShipSize, state.shipOrientation);
+      const cls = valid ? 'cell-ship-preview' : 'cell-ship-invalid';
+      for (let i = 0; i < state.selectedShipSize; i++) {
+        const cx = state.shipOrientation === 'h' ? x + i : x;
+        const cy = state.shipOrientation === 'h' ? y : y + i;
+        const target = document.querySelector(`[data-mode="place"][data-x="${cx}"][data-y="${cy}"]`);
+        if (target && !target.classList.contains('cell-ship')) target.classList.add(cls);
+      }
+    };
+
+    cell.onmouseleave = () => {
+      document.querySelectorAll('.cell-ship-preview,.cell-ship-invalid').forEach(el => el.classList.remove('cell-ship-preview', 'cell-ship-invalid'));
+    };
+  });
+
+  document.querySelectorAll('[data-mode="shoot"]').forEach(cell => {
+    cell.onclick = () => fireShot(Number(cell.dataset.x), Number(cell.dataset.y));
+  });
+
+  document.querySelectorAll('[data-answer]').forEach(btn => {
+    // DŮLEŽITÉ: odpověď je písmeno a/b/c/d, NE parseInt().
+    btn.onclick = () => answerQuestion(btn.dataset.answer);
+  });
+
+  const btnBackMenu = document.getElementById('btn-back-menu');
+  if (btnBackMenu) btnBackMenu.onclick = () => { resetState(); render(); };
+
+  const btnLogin = document.getElementById('btn-admin-login');
+  if (btnLogin) btnLogin.onclick = adminLogin;
+
+  const passInput = document.getElementById('admin-password');
+  if (passInput) passInput.onkeydown = e => { if (e.key === 'Enter') adminLogin(); };
+
+  const btnLogout = document.getElementById('btn-logout');
+  if (btnLogout) btnLogout.onclick = () => {
+    state.adminAuthenticated = false;
+    state.view = 'menu';
+    render();
+  };
+
+  document.querySelectorAll('[data-tab]').forEach(tab => {
+    tab.onclick = () => {
+      state.activeAdminTab = tab.dataset.tab;
+      render();
+    };
+  });
+
+  const btnCreateTopic = document.getElementById('btn-create-topic');
+  if (btnCreateTopic) btnCreateTopic.onclick = createTopicFromUrl;
+
+  document.querySelectorAll('[data-topic-id]').forEach(btn => {
+    btn.onclick = async () => {
+      const topic = state.allTopics.find(t => t.__backendId === btn.dataset.topicId);
+      if (!topic) return;
+      const result = await store.delete(topic);
+      if (result.isOk) {
+        toast(`Okruh „${topic.topicName}“ smazán.`, 'success');
+        render();
+      } else {
+        toast('Okruh se nepodařilo smazat.', 'error');
+      }
+    };
+  });
+
+  const btnTestUrl = document.getElementById('btn-test-url');
+  if (btnTestUrl) btnTestUrl.onclick = async () => {
+    const resultEl = document.getElementById('admin-result');
+    resultEl.innerHTML = '<div class="flex items-center gap-2 text-cyan-300"><div class="loader" style="width:14px;height:14px"></div>Načítám…</div>';
+    try {
+      const qs = await loadQuestionsFromUrl(document.getElementById('admin-url')?.value);
+      resultEl.innerHTML = prettyQuestionResult(qs);
+      safeIcons();
+    } catch (e) {
+      resultEl.innerHTML = `<div class="p-3 rounded-xl bg-red-500/15 border border-red-500/30 text-xs text-red-300">${escapeHtml(e.message)}</div>`;
+    }
+  };
+
+  const btnValidate = document.getElementById('btn-validate-json');
+  if (btnValidate) btnValidate.onclick = () => {
+    const resultEl = document.getElementById('admin-json-result');
+    try {
+      const qs = normalizeQuestions(JSON.parse(document.getElementById('admin-json-paste')?.value || ''));
+      resultEl.innerHTML = prettyQuestionResult(qs);
+      safeIcons();
+    } catch (e) {
+      resultEl.innerHTML = `<div class="p-3 rounded-xl bg-red-500/15 border border-red-500/30 text-xs text-red-300">${escapeHtml(e.message)}</div>`;
+    }
+  };
+}
+
+
+function updateTopicSelectionSummary() {
+  const el = document.getElementById('topic-selection-summary');
+  if (!el) return;
+  const ids = Array.from(document.querySelectorAll('.topic-choice:checked')).map(ch => ch.value);
+  const selected = state.allTopics.filter(t => ids.includes(t.__backendId));
+  const count = selected.reduce((sum, t) => sum + Number(t.questionCount || 0), 0);
+  el.textContent = ids.length
+    ? `Vybráno: ${ids.length} okruhů · přibližně ${count} otázek.`
+    : 'Není vybraný žádný okruh.';
+}
+
+function adminLogin() {
+  const pass = document.getElementById('admin-password')?.value;
+  if (pass === '579') {
+    state.adminAuthenticated = true;
+    state.activeAdminTab = 'topics';
+    render();
+  } else {
+    toast('Nesprávné heslo.', 'error');
+    const inp = document.getElementById('admin-password');
+    if (inp) inp.value = '';
+  }
+}
+
+init();
+</script>
+</body>
+</html>
