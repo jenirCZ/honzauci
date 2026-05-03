@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kterým písmenem řecké abecedy obvykle značíme hustotu?",
+    "moznosti": {
+      "a": "ρ (ró)",
+      "b": "σ (sigma)",
+      "c": "ω (omega)",
+      "d": "δ (delta)"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 2,
+    "otazka": "Jak zní základní vzorec pro výpočet hustoty?",
+    "moznosti": {
+      "a": "ρ = m · V",
+      "b": "ρ = m / V",
+      "c": "ρ = V / m",
+      "d": "ρ = m + V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Jaká je základní jednotka hustoty v soustavě SI?",
+    "moznosti": {
+      "a": "g/cm³",
+      "b": "kg/m³",
+      "c": "kg/l",
+      "d": "g/l"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik kg/m³ odpovídá hustotě 1 g/cm³?",
+    "moznosti": {
+      "a": "10",
+      "b": "100",
+      "c": "1000",
+      "d": "0.001"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 5,
+    "otazka": "Jaká je přibližná hustota čisté vody?",
+    "moznosti": {
+      "a": "1000 kg/m³",
+      "b": "100 kg/m³",
+      "c": "7800 kg/m³",
+      "d": "13600 kg/m³"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 6,
+    "otazka": "Pokud má těleso hustotu větší než voda, co se s ním stane?",
+    "moznosti": {
+      "a": "Bude plavat",
+      "b": "Bude se vznášet",
+      "c": "Klesne ke dnu",
+      "d": "Vypaří se"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 7,
+    "otazka": "Jak se změní hustota, pokud zvětšíme objem a hmotnost zůstane stejná?",
+    "moznosti": {
+      "a": "Zvětší se",
+      "b": "Zmenší se",
+      "c": "Zůstane stejná",
+      "d": "Bude nulová"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Jak změříme objem nepravidelného tělesa?",
+    "moznosti": {
+      "a": "Váhami",
+      "b": "Odměrným válcem",
+      "c": "Pravítkem",
+      "d": "Siloměrem"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 9,
+    "otazka": "Vypočítej hustotu: m = 200 g, V = 40 cm³.",
+    "moznosti": {
+      "a": "8000 g/cm³",
+      "b": "5 g/cm³",
+      "c": "0.2 g/cm³",
+      "d": "240 g/cm³"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 10,
+    "otazka": "Která látka má největší hustotu?",
+    "moznosti": {
+      "a": "Korek",
+      "b": "Voda",
+      "c": "Železo",
+      "d": "Vzduch"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 11,
+    "otazka": "Jak vypočítáme hmotnost z hustoty a objemu?",
+    "moznosti": {
+      "a": "m = ρ · V",
+      "b": "m = ρ / V",
+      "c": "m = V / ρ",
+      "d": "m = ρ + V"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 12,
+    "otazka": "Proč olej plave na vodě?",
+    "moznosti": {
+      "a": "Má větší hustotu",
+      "b": "Má menší hustotu",
+      "c": "Smíchá se",
+      "d": "Je magnetický"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Hustota olova je 11300 kg/m³. Kolik je to g/cm³?",
+    "moznosti": {
+      "a": "113",
+      "b": "1.13",
+      "c": "11.3",
+      "d": "11300000"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 14,
+    "otazka": "Jaký objem má 100 g látky s hustotou 0.5 g/cm³?",
+    "moznosti": {
+      "a": "50 cm³",
+      "b": "200 cm³",
+      "c": "0.005 cm³",
+      "d": "100.5 cm³"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Dvě kuličky mají stejný objem. Která je těžší (hliník vs zlato)?",
+    "moznosti": {
+      "a": "Hliník",
+      "b": "Zlato",
+      "c": "Stejné",
+      "d": "Nelze určit"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 16,
+    "otazka": "Na čem závisí hustota plynů?",
+    "moznosti": {
+      "a": "Čas",
+      "b": "Teplota a tlak",
+      "c": "Barva",
+      "d": "Zvuk"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Rozřízneme kostku na polovinu. Jaká bude hustota?",
+    "moznosti": {
+      "a": "Poloviční",
+      "b": "Dvojnásobná",
+      "c": "Stejná",
+      "d": "Nulová"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 18,
+    "otazka": "Který kov má hustotu asi 7.8 g/cm³?",
+    "moznosti": {
+      "a": "Hliník",
+      "b": "Železo",
+      "c": "Zlato",
+      "d": "Měď"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Hustota ledu je 917 kg/m³. Co platí?",
+    "moznosti": {
+      "a": "Potopí se",
+      "b": "Většina je nad hladinou",
+      "c": "Většina je pod hladinou",
+      "d": "Zmizí"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 20,
+    "otazka": "Jak vypočítáme objem kvádru?",
+    "moznosti": {
+      "a": "V = a · b · c",
+      "b": "Vážením",
+      "c": "Teplotou",
+      "d": "Ponořením"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik váží 1 dm³ rtuti (ρ = 13600 kg/m³)?",
+    "moznosti": {
+      "a": "1.36 kg",
+      "b": "13.6 kg",
+      "c": "136 kg",
+      "d": "0.136 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "m = 150 g, V = 150 cm³. Hustota je:",
+    "moznosti": {
+      "a": "0",
+      "b": "1 g/cm³",
+      "c": "22500 g/cm³",
+      "d": "150 g/cm³"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Proč CO₂ klesá k zemi?",
+    "moznosti": {
+      "a": "Je lehčí",
+      "b": "Je těžší",
+      "c": "Stejný",
+      "d": "Svítí"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 24,
+    "otazka": "2 m³ váží 1600 kg. Hustota je:",
+    "moznosti": {
+      "a": "3200",
+      "b": "1600",
+      "c": "800",
+      "d": "400"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 25,
+    "otazka": "Která kapalina bude dole (med > voda > olej)?",
+    "moznosti": {
+      "a": "Voda",
+      "b": "Olej",
+      "c": "Med",
+      "d": "Smíchají se"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik váží vzduch v 1 m³ (ρ = 1.3 kg/m³)?",
+    "moznosti": {
+      "a": "0",
+      "b": "1.3 kg",
+      "c": "1.3 g",
+      "d": "13 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 27,
+    "otazka": "Co se stane s hustotou vody při zmrznutí?",
+    "moznosti": {
+      "a": "Zvětší se",
+      "b": "Zmenší se",
+      "c": "Stejná",
+      "d": "Nelze určit"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Jak vypočítáme objem z m a ρ?",
+    "moznosti": {
+      "a": "V = m · ρ",
+      "b": "V = m / ρ",
+      "c": "V = ρ / m",
+      "d": "V = m - ρ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Hustota lidského těla je:",
+    "moznosti": {
+      "a": "Mnohem větší",
+      "b": "Mnohem menší",
+      "c": "Podobná vodě",
+      "d": "Nedefinovaná"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 30,
+    "otazka": "Kde se využívá změna hustoty vzduchu při zahřátí?",
+    "moznosti": {
+      "a": "Ponorky",
+      "b": "Balony",
+      "c": "Pneumatiky",
+      "d": "Konvice"
+    },
+    "spravna_odpoved": "b"
+  }
+]
