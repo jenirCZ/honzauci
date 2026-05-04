@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "otazka": "Jakou značkou označujeme hustotu?",
+    "moznosti": {"a": "ρ", "b": "v", "c": "m", "d": "F"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 2,
+    "otazka": "Jak zní základní vzorec pro hustotu?",
+    "moznosti": {"a": "ρ = m · V", "b": "ρ = m / V", "c": "ρ = V / m", "d": "ρ = m + V"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Jaká je jednotka hustoty v SI?",
+    "moznosti": {"a": "kg", "b": "m³", "c": "kg/m³", "d": "N"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 4,
+    "otazka": "Co znamená veličina m ve vzorci pro hustotu?",
+    "moznosti": {"a": "objem", "b": "hmotnost", "c": "rychlost", "d": "síla"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 5,
+    "otazka": "Co znamená veličina V ve vzorci pro hustotu?",
+    "moznosti": {"a": "objem", "b": "hmotnost", "c": "teplota", "d": "čas"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 6,
+    "otazka": "Jaká je přibližná hustota vody?",
+    "moznosti": {"a": "10 kg/m³", "b": "100 kg/m³", "c": "1000 kg/m³", "d": "10000 kg/m³"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 7,
+    "otazka": "Která látka má větší hustotu?",
+    "moznosti": {"a": "vzduch", "b": "voda", "c": "olej", "d": "dřevo"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Co se stane s hustotou při zvětšení objemu při stejné hmotnosti?",
+    "moznosti": {"a": "zvětší se", "b": "zmenší se", "c": "zůstane stejná", "d": "nelze určit"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 9,
+    "otazka": "Který materiál se potopí ve vodě?",
+    "moznosti": {"a": "dřevo", "b": "polystyren", "c": "železo", "d": "led"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 10,
+    "otazka": "Který materiál plave na vodě?",
+    "moznosti": {"a": "železo", "b": "olovo", "c": "dřevo", "d": "měď"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 11,
+    "otazka": "Hustota závisí na:",
+    "moznosti": {"a": "hmotnosti a objemu", "b": "rychlosti", "c": "síle", "d": "čase"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 12,
+    "otazka": "Která látka má nejmenší hustotu?",
+    "moznosti": {"a": "voda", "b": "olej", "c": "vzduch", "d": "železo"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 13,
+    "otazka": "Jaký je objem tělesa o hmotnosti 2 kg a hustotě 1000 kg/m³?",
+    "moznosti": {"a": "0,002 m³", "b": "2 m³", "c": "2000 m³", "d": "0,2 m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 14,
+    "otazka": "Jak se změní hustota při zdvojnásobení hmotnosti a objemu?",
+    "moznosti": {"a": "zvětší se", "b": "zmenší se", "c": "zůstane stejná", "d": "vynuluje se"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 15,
+    "otazka": "Jaká je hustota látky o hmotnosti 500 g a objemu 0,001 m³?",
+    "moznosti": {"a": "500 kg/m³", "b": "50 kg/m³", "c": "5000 kg/m³", "d": "5 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 16,
+    "otazka": "Která látka má větší hustotu než voda?",
+    "moznosti": {"a": "olej", "b": "benzín", "c": "rtuť", "d": "dřevo"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 17,
+    "otazka": "Jaká veličina je hustota?",
+    "moznosti": {"a": "skalární", "b": "vektorová", "c": "bezrozměrná", "d": "časová"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 18,
+    "otazka": "Jak se měří objem kapaliny?",
+    "moznosti": {"a": "váhou", "b": "teploměrem", "c": "odměrným válcem", "d": "siloměrem"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 19,
+    "otazka": "Jak se měří hmotnost?",
+    "moznosti": {"a": "teploměrem", "b": "váhou", "c": "pravítkem", "d": "stopkami"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 20,
+    "otazka": "Co určuje, zda těleso plave nebo se potopí?",
+    "moznosti": {"a": "barva", "b": "tvar", "c": "hustota", "d": "teplota"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 21,
+    "otazka": "Jaká je hustota ledu ve srovnání s vodou?",
+    "moznosti": {"a": "větší", "b": "menší", "c": "stejná", "d": "nulová"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "Proč led plave na vodě?",
+    "moznosti": {"a": "má větší hmotnost", "b": "má menší hustotu", "c": "je teplejší", "d": "má větší objem"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Jaká je hustota železa přibližně?",
+    "moznosti": {"a": "7800 kg/m³", "b": "1000 kg/m³", "c": "500 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 24,
+    "otazka": "Která veličina je ve jmenovateli vzorce hustoty?",
+    "moznosti": {"a": "hmotnost", "b": "objem", "c": "síla", "d": "čas"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 25,
+    "otazka": "Jaká je hustota vzduchu?",
+    "moznosti": {"a": "1,2 kg/m³", "b": "1000 kg/m³", "c": "100 kg/m³", "d": "10 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 26,
+    "otazka": "Jaká látka má největší hustotu?",
+    "moznosti": {"a": "vzduch", "b": "dřevo", "c": "rtuť", "d": "voda"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 27,
+    "otazka": "Jaký objem má těleso o hustotě 500 kg/m³ a hmotnosti 1 kg?",
+    "moznosti": {"a": "0,002 m³", "b": "2 m³", "c": "0,5 m³", "d": "0,02 m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 28,
+    "otazka": "Co se stane s hustotou při zvýšení hmotnosti při stejném objemu?",
+    "moznosti": {"a": "zvětší se", "b": "zmenší se", "c": "zůstane stejná", "d": "zmizí"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 29,
+    "otazka": "Který kov je lehčí než voda?",
+    "moznosti": {"a": "železo", "b": "hliník", "c": "měď", "d": "žádný"},
+    "spravna_odpoved": "d"
+  },
+  {
+    "id": 30,
+    "otazka": "Jaká je hustota oleje oproti vodě?",
+    "moznosti": {"a": "větší", "b": "menší", "c": "stejná", "d": "nulová"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 31,
+    "otazka": "Jak se změní hustota při zmenšení objemu při stejné hmotnosti?",
+    "moznosti": {"a": "zvětší se", "b": "zmenší se", "c": "zůstane stejná", "d": "nelze určit"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 32,
+    "otazka": "Jaká je hustota zlata přibližně?",
+    "moznosti": {"a": "19300 kg/m³", "b": "1000 kg/m³", "c": "5000 kg/m³", "d": "800 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 33,
+    "otazka": "Jaká je hustota hliníku?",
+    "moznosti": {"a": "2700 kg/m³", "b": "1000 kg/m³", "c": "500 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 34,
+    "otazka": "Která látka má menší hustotu než voda?",
+    "moznosti": {"a": "rtuť", "b": "železo", "c": "olej", "d": "měď"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 35,
+    "otazka": "Co je hustota?",
+    "moznosti": {
+      "a": "hmotnost na jednotku objemu",
+      "b": "objem na jednotku hmotnosti",
+      "c": "síla na jednotku plochy",
+      "d": "rychlost tělesa"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 36,
+    "otazka": "Jaký je objem 1 kg vody?",
+    "moznosti": {"a": "1 m³", "b": "0,001 m³", "c": "0,1 m³", "d": "10 m³"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 37,
+    "otazka": "Který materiál má přibližně hustotu 1000 kg/m³?",
+    "moznosti": {"a": "vzduch", "b": "voda", "c": "železo", "d": "dřevo"},
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 38,
+    "otazka": "Jaká je hustota mědi?",
+    "moznosti": {"a": "8900 kg/m³", "b": "1000 kg/m³", "c": "500 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 39,
+    "otazka": "Jaká je hustota olova?",
+    "moznosti": {"a": "11300 kg/m³", "b": "1000 kg/m³", "c": "500 kg/m³", "d": "200 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 40,
+    "otazka": "Která látka má největší hustotu z uvedených?",
+    "moznosti": {"a": "dřevo", "b": "voda", "c": "vzduch", "d": "olovo"},
+    "spravna_odpoved": "d"
+  },
+  {
+    "id": 41,
+    "otazka": "Jaká je hustota benzínu?",
+    "moznosti": {"a": "700 kg/m³", "b": "1000 kg/m³", "c": "1500 kg/m³", "d": "2000 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 42,
+    "otazka": "Jaká je hustota dřeva přibližně?",
+    "moznosti": {"a": "300–900 kg/m³", "b": "1000 kg/m³", "c": "5000 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 43,
+    "otazka": "Jaká je hustota skla?",
+    "moznosti": {"a": "2500 kg/m³", "b": "1000 kg/m³", "c": "500 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 44,
+    "otazka": "Která látka má hustotu menší než vzduch?",
+    "moznosti": {"a": "helium", "b": "voda", "c": "olej", "d": "železo"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 45,
+    "otazka": "Jak se mění hustota kapalin s teplotou?",
+    "moznosti": {"a": "většinou klesá", "b": "většinou roste", "c": "nemění se", "d": "mizí"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 46,
+    "otazka": "Jaká je hustota vody při 4 °C?",
+    "moznosti": {"a": "největší", "b": "nejmenší", "c": "nulová", "d": "stejná jako při 100 °C"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 47,
+    "otazka": "Co znamená menší hustota látky?",
+    "moznosti": {
+      "a": "méně hmoty v daném objemu",
+      "b": "více hmoty v daném objemu",
+      "c": "větší síla",
+      "d": "větší rychlost"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 48,
+    "otazka": "Jaká je hustota plastů přibližně?",
+    "moznosti": {"a": "900–1400 kg/m³", "b": "1000 kg/m³", "c": "5000 kg/m³", "d": "100 kg/m³"},
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 49,
+    "otazka": "Která látka se vždy potopí ve vodě?",
+    "moznosti": {"a": "dřevo", "b": "olej", "c": "železo", "d": "led"},
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 50,
+    "otazka": "Co je potřeba znát pro výpočet hustoty?",
+    "moznosti": {"a": "hmotnost a objem", "b": "čas a rychlost", "c": "sílu a dráhu", "d": "teplotu"},
+    "spravna_odpoved": "a"
+  }
+]
