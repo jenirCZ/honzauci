@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik sekund je 1 minuta?",
+    "moznosti": {
+      "a": "10 s",
+      "b": "60 s",
+      "c": "100 s",
+      "d": "360 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik minut je 2 hodiny?",
+    "moznosti": {
+      "a": "20 min",
+      "b": "120 min",
+      "c": "200 min",
+      "d": "12 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik sekund je 5 minut?",
+    "moznosti": {
+      "a": "50 s",
+      "b": "300 s",
+      "c": "500 s",
+      "d": "3000 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik hodin je 180 minut?",
+    "moznosti": {
+      "a": "18 h",
+      "b": "1,8 h",
+      "c": "3 h",
+      "d": "30 h"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik minut je 360 sekund?",
+    "moznosti": {
+      "a": "3 min",
+      "b": "6 min",
+      "c": "36 min",
+      "d": "60 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik sekund je 2 hodiny?",
+    "moznosti": {
+      "a": "720 s",
+      "b": "7200 s",
+      "c": "72000 s",
+      "d": "120 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik minut je 1,5 hodiny?",
+    "moznosti": {
+      "a": "15 min",
+      "b": "90 min",
+      "c": "150 min",
+      "d": "9 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik sekund je 15 minut?",
+    "moznosti": {
+      "a": "150 s",
+      "b": "900 s",
+      "c": "9000 s",
+      "d": "90 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik hodin je 300 minut?",
+    "moznosti": {
+      "a": "30 h",
+      "b": "3 h",
+      "c": "5 h",
+      "d": "50 h"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik minut je 720 sekund?",
+    "moznosti": {
+      "a": "12 min",
+      "b": "72 min",
+      "c": "7,2 min",
+      "d": "120 min"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik sekund je 0,5 minuty?",
+    "moznosti": {
+      "a": "5 s",
+      "b": "30 s",
+      "c": "300 s",
+      "d": "60 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik minut je 4 hodiny?",
+    "moznosti": {
+      "a": "40 min",
+      "b": "240 min",
+      "c": "400 min",
+      "d": "24 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik sekund je 10 minut?",
+    "moznosti": {
+      "a": "100 s",
+      "b": "600 s",
+      "c": "1000 s",
+      "d": "60 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik hodin je 90 minut?",
+    "moznosti": {
+      "a": "9 h",
+      "b": "1,5 h",
+      "c": "15 h",
+      "d": "0,9 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik minut je 540 sekund?",
+    "moznosti": {
+      "a": "5,4 min",
+      "b": "54 min",
+      "c": "9 min",
+      "d": "90 min"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik sekund je 3 hodiny?",
+    "moznosti": {
+      "a": "1080 s",
+      "b": "10800 s",
+      "c": "1800 s",
+      "d": "3000 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik minut je 2,5 hodiny?",
+    "moznosti": {
+      "a": "25 min",
+      "b": "150 min",
+      "c": "250 min",
+      "d": "125 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik sekund je 45 minut?",
+    "moznosti": {
+      "a": "450 s",
+      "b": "2700 s",
+      "c": "4500 s",
+      "d": "2750 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik hodin je 600 minut?",
+    "moznosti": {
+      "a": "6 h",
+      "b": "60 h",
+      "c": "10 h",
+      "d": "100 h"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik minut je 1800 sekund?",
+    "moznosti": {
+      "a": "18 min",
+      "b": "30 min",
+      "c": "300 min",
+      "d": "3 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik sekund je 1,5 hodiny?",
+    "moznosti": {
+      "a": "1500 s",
+      "b": "5400 s",
+      "c": "900 s",
+      "d": "3600 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik minut je 0,5 hodiny?",
+    "moznosti": {
+      "a": "5 min",
+      "b": "50 min",
+      "c": "30 min",
+      "d": "300 min"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik sekund je 20 minut?",
+    "moznosti": {
+      "a": "1200 s",
+      "b": "2000 s",
+      "c": "120 s",
+      "d": "20 s"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik hodin je 30 minut?",
+    "moznosti": {
+      "a": "3 h",
+      "b": "0,5 h",
+      "c": "5 h",
+      "d": "0,3 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik minut je 240 sekund?",
+    "moznosti": {
+      "a": "24 min",
+      "b": "2,4 min",
+      "c": "4 min",
+      "d": "40 min"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik sekund je 4 hodiny?",
+    "moznosti": {
+      "a": "1440 s",
+      "b": "14400 s",
+      "c": "4000 s",
+      "d": "2400 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik minut je 3 hodiny?",
+    "moznosti": {
+      "a": "30 min",
+      "b": "180 min",
+      "c": "300 min",
+      "d": "18 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik sekund je 25 minut?",
+    "moznosti": {
+      "a": "250 s",
+      "b": "1500 s",
+      "c": "2500 s",
+      "d": "1250 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik hodin je 720 minut?",
+    "moznosti": {
+      "a": "7,2 h",
+      "b": "12 h",
+      "c": "72 h",
+      "d": "120 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik minut je 900 sekund?",
+    "moznosti": {
+      "a": "9 min",
+      "b": "15 min",
+      "c": "90 min",
+      "d": "1,5 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik sekund je 12 minut?",
+    "moznosti": {
+      "a": "120 s",
+      "b": "720 s",
+      "c": "7200 s",
+      "d": "12 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik hodin je 150 minut?",
+    "moznosti": {
+      "a": "15 h",
+      "b": "2,5 h",
+      "c": "1,5 h",
+      "d": "25 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik minut je 420 sekund?",
+    "moznosti": {
+      "a": "42 min",
+      "b": "7 min",
+      "c": "4,2 min",
+      "d": "70 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik sekund je 6 hodin?",
+    "moznosti": {
+      "a": "2160 s",
+      "b": "21600 s",
+      "c": "6000 s",
+      "d": "3600 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik minut je 1,25 hodiny?",
+    "moznosti": {
+      "a": "12,5 min",
+      "b": "75 min",
+      "c": "125 min",
+      "d": "7,5 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik sekund je 8 minut?",
+    "moznosti": {
+      "a": "480 s",
+      "b": "800 s",
+      "c": "80 s",
+      "d": "48 s"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik hodin je 480 minut?",
+    "moznosti": {
+      "a": "4,8 h",
+      "b": "8 h",
+      "c": "48 h",
+      "d": "80 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik minut je 3600 sekund?",
+    "moznosti": {
+      "a": "36 min",
+      "b": "60 min",
+      "c": "600 min",
+      "d": "6 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik sekund je 0,25 hodiny?",
+    "moznosti": {
+      "a": "250 s",
+      "b": "900 s",
+      "c": "1500 s",
+      "d": "90 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik hodin je 45 minut?",
+    "moznosti": {
+      "a": "4,5 h",
+      "b": "0,75 h",
+      "c": "7,5 h",
+      "d": "0,45 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik minut je 150 sekund?",
+    "moznosti": {
+      "a": "15 min",
+      "b": "2,5 min",
+      "c": "25 min",
+      "d": "1,5 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik sekund je 7 minut?",
+    "moznosti": {
+      "a": "420 s",
+      "b": "700 s",
+      "c": "70 s",
+      "d": "42 s"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik hodin je 240 minut?",
+    "moznosti": {
+      "a": "2,4 h",
+      "b": "24 h",
+      "c": "4 h",
+      "d": "40 h"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik minut je 2700 sekund?",
+    "moznosti": {
+      "a": "27 min",
+      "b": "45 min",
+      "c": "270 min",
+      "d": "4,5 min"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik sekund je 9 hodin?",
+    "moznosti": {
+      "a": "3240 s",
+      "b": "32400 s",
+      "c": "9000 s",
+      "d": "5400 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik hodin je 75 minut?",
+    "moznosti": {
+      "a": "7,5 h",
+      "b": "1,25 h",
+      "c": "0,75 h",
+      "d": "12,5 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik minut je 30 sekund?",
+    "moznosti": {
+      "a": "0,5 min",
+      "b": "5 min",
+      "c": "3 min",
+      "d": "0,3 min"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik sekund je 11 minut?",
+    "moznosti": {
+      "a": "110 s",
+      "b": "660 s",
+      "c": "6600 s",
+      "d": "11 s"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik hodin je 840 minut?",
+    "moznosti": {
+      "a": "8,4 h",
+      "b": "14 h",
+      "c": "84 h",
+      "d": "140 h"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik minut je 10800 sekund?",
+    "moznosti": {
+      "a": "108 min",
+      "b": "18 min",
+      "c": "180 min",
+      "d": "1800 min"
+    },
+    "spravna_odpoved": "c"
+  }
+]
