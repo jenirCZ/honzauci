@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik centimetrů je 2 m?",
+    "moznosti": {
+      "a": "20 cm",
+      "b": "200 cm",
+      "c": "2000 cm",
+      "d": "2 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik metrů je 3 km?",
+    "moznosti": {
+      "a": "30 m",
+      "b": "300 m",
+      "c": "3000 m",
+      "d": "30000 m"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik milimetrů je 5 cm?",
+    "moznosti": {
+      "a": "50 mm",
+      "b": "500 mm",
+      "c": "5 mm",
+      "d": "0,5 mm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik decimetrů je 4 m?",
+    "moznosti": {
+      "a": "40 dm",
+      "b": "400 dm",
+      "c": "4 dm",
+      "d": "0,4 dm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik metrů je 250 cm?",
+    "moznosti": {
+      "a": "25 m",
+      "b": "2,5 m",
+      "c": "0,25 m",
+      "d": "2500 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik centimetrů je 7 dm?",
+    "moznosti": {
+      "a": "700 cm",
+      "b": "70 cm",
+      "c": "7 cm",
+      "d": "0,7 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik metrů je 6000 mm?",
+    "moznosti": {
+      "a": "0,6 m",
+      "b": "6 m",
+      "c": "60 m",
+      "d": "600 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik milimetrů je 9 m?",
+    "moznosti": {
+      "a": "90 mm",
+      "b": "900 mm",
+      "c": "9000 mm",
+      "d": "90000 mm"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik kilometrů je 5000 m?",
+    "moznosti": {
+      "a": "5 km",
+      "b": "50 km",
+      "c": "0,5 km",
+      "d": "500 km"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik centimetrů je 0,5 m?",
+    "moznosti": {
+      "a": "5 cm",
+      "b": "50 cm",
+      "c": "500 cm",
+      "d": "0,5 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik metrů je 8 dm?",
+    "moznosti": {
+      "a": "0,8 m",
+      "b": "8 m",
+      "c": "80 m",
+      "d": "0,08 m"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik milimetrů je 12 cm?",
+    "moznosti": {
+      "a": "12 mm",
+      "b": "120 mm",
+      "c": "1200 mm",
+      "d": "1,2 mm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik centimetrů je 3,5 m?",
+    "moznosti": {
+      "a": "35 cm",
+      "b": "350 cm",
+      "c": "3500 cm",
+      "d": "3,5 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik metrů je 150 cm?",
+    "moznosti": {
+      "a": "15 m",
+      "b": "1,5 m",
+      "c": "0,15 m",
+      "d": "1500 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik decimetrů je 2,5 m?",
+    "moznosti": {
+      "a": "25 dm",
+      "b": "250 dm",
+      "c": "2,5 dm",
+      "d": "0,25 dm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik kilometrů je 12000 m?",
+    "moznosti": {
+      "a": "1,2 km",
+      "b": "12 km",
+      "c": "120 km",
+      "d": "0,12 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik metrů je 4,2 km?",
+    "moznosti": {
+      "a": "420 m",
+      "b": "4200 m",
+      "c": "42 m",
+      "d": "42000 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik centimetrů je 15 mm?",
+    "moznosti": {
+      "a": "150 cm",
+      "b": "1,5 cm",
+      "c": "15 cm",
+      "d": "0,15 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik milimetrů je 0,8 cm?",
+    "moznosti": {
+      "a": "8 mm",
+      "b": "80 mm",
+      "c": "0,8 mm",
+      "d": "800 mm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik metrů je 900 cm?",
+    "moznosti": {
+      "a": "90 m",
+      "b": "9 m",
+      "c": "0,9 m",
+      "d": "9000 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik centimetrů je 6 m?",
+    "moznosti": {
+      "a": "60 cm",
+      "b": "600 cm",
+      "c": "6000 cm",
+      "d": "6 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik metrů je 700 mm?",
+    "moznosti": {
+      "a": "7 m",
+      "b": "0,7 m",
+      "c": "70 m",
+      "d": "0,07 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik kilometrů je 2500 m?",
+    "moznosti": {
+      "a": "25 km",
+      "b": "2,5 km",
+      "c": "0,25 km",
+      "d": "250 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik decimetrů je 80 cm?",
+    "moznosti": {
+      "a": "8 dm",
+      "b": "80 dm",
+      "c": "0,8 dm",
+      "d": "800 dm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik milimetrů je 2 dm?",
+    "moznosti": {
+      "a": "20 mm",
+      "b": "200 mm",
+      "c": "2000 mm",
+      "d": "2 mm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik metrů je 0,5 km?",
+    "moznosti": {
+      "a": "50 m",
+      "b": "500 m",
+      "c": "5000 m",
+      "d": "5 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik centimetrů je 1,2 m?",
+    "moznosti": {
+      "a": "12 cm",
+      "b": "120 cm",
+      "c": "1200 cm",
+      "d": "1,2 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik metrů je 3500 mm?",
+    "moznosti": {
+      "a": "35 m",
+      "b": "3,5 m",
+      "c": "0,35 m",
+      "d": "350 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik milimetrů je 14 cm?",
+    "moznosti": {
+      "a": "140 mm",
+      "b": "14 mm",
+      "c": "1400 mm",
+      "d": "1,4 mm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik kilometrů je 800 m?",
+    "moznosti": {
+      "a": "8 km",
+      "b": "0,8 km",
+      "c": "80 km",
+      "d": "0,08 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik metrů je 50 dm?",
+    "moznosti": {
+      "a": "500 m",
+      "b": "5 m",
+      "c": "0,5 m",
+      "d": "50 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik centimetrů je 9 dm?",
+    "moznosti": {
+      "a": "90 cm",
+      "b": "9 cm",
+      "c": "900 cm",
+      "d": "0,9 cm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik metrů je 1100 cm?",
+    "moznosti": {
+      "a": "1,1 m",
+      "b": "11 m",
+      "c": "110 m",
+      "d": "0,11 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik milimetrů je 0,4 m?",
+    "moznosti": {
+      "a": "4 mm",
+      "b": "40 mm",
+      "c": "400 mm",
+      "d": "4000 mm"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik decimetrů je 300 cm?",
+    "moznosti": {
+      "a": "30 dm",
+      "b": "300 dm",
+      "c": "3 dm",
+      "d": "0,3 dm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik kilometrů je 15000 m?",
+    "moznosti": {
+      "a": "150 km",
+      "b": "15 km",
+      "c": "1,5 km",
+      "d": "0,15 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik metrů je 2,3 km?",
+    "moznosti": {
+      "a": "230 m",
+      "b": "2300 m",
+      "c": "23 m",
+      "d": "23000 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik centimetrů je 45 mm?",
+    "moznosti": {
+      "a": "4,5 cm",
+      "b": "45 cm",
+      "c": "0,45 cm",
+      "d": "450 cm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik metrů je 75 cm?",
+    "moznosti": {
+      "a": "7,5 m",
+      "b": "0,75 m",
+      "c": "75 m",
+      "d": "0,075 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik milimetrů je 6 dm?",
+    "moznosti": {
+      "a": "60 mm",
+      "b": "600 mm",
+      "c": "6000 mm",
+      "d": "6 mm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik centimetrů je 2,8 m?",
+    "moznosti": {
+      "a": "28 cm",
+      "b": "280 cm",
+      "c": "2800 cm",
+      "d": "2,8 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik metrů je 950 mm?",
+    "moznosti": {
+      "a": "9,5 m",
+      "b": "0,95 m",
+      "c": "95 m",
+      "d": "0,095 m"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik kilometrů je 3200 m?",
+    "moznosti": {
+      "a": "32 km",
+      "b": "3,2 km",
+      "c": "0,32 km",
+      "d": "320 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik decimetrů je 1,4 m?",
+    "moznosti": {
+      "a": "14 dm",
+      "b": "140 dm",
+      "c": "1,4 dm",
+      "d": "0,14 dm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik centimetrů je 0,9 m?",
+    "moznosti": {
+      "a": "9 cm",
+      "b": "90 cm",
+      "c": "900 cm",
+      "d": "0,9 cm"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik metrů je 200 mm?",
+    "moznosti": {
+      "a": "20 m",
+      "b": "2 m",
+      "c": "0,2 m",
+      "d": "0,02 m"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik milimetrů je 1,5 cm?",
+    "moznosti": {
+      "a": "15 mm",
+      "b": "150 mm",
+      "c": "1,5 mm",
+      "d": "0,15 mm"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik kilometrů je 600 m?",
+    "moznosti": {
+      "a": "6 km",
+      "b": "0,6 km",
+      "c": "60 km",
+      "d": "0,06 km"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik metrů je 5 dm?",
+    "moznosti": {
+      "a": "0,5 m",
+      "b": "5 m",
+      "c": "50 m",
+      "d": "0,05 m"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik centimetrů je 250 mm?",
+    "moznosti": {
+      "a": "2,5 cm",
+      "b": "25 cm",
+      "c": "250 cm",
+      "d": "0,25 cm"
+    },
+    "spravna_odpoved": "b"
+  }
+]
