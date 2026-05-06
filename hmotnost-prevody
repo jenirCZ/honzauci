@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik gramů je 2 kg?",
+    "moznosti": {
+      "a": "20 g",
+      "b": "200 g",
+      "c": "2000 g",
+      "d": "20000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik kilogramů je 5000 g?",
+    "moznosti": {
+      "a": "0,5 kg",
+      "b": "5 kg",
+      "c": "50 kg",
+      "d": "500 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik miligramů je 3 g?",
+    "moznosti": {
+      "a": "30 mg",
+      "b": "300 mg",
+      "c": "3000 mg",
+      "d": "30000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik gramů je 7 dag?",
+    "moznosti": {
+      "a": "7 g",
+      "b": "70 g",
+      "c": "700 g",
+      "d": "7000 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik kilogramů je 2500 g?",
+    "moznosti": {
+      "a": "25 kg",
+      "b": "2,5 kg",
+      "c": "0,25 kg",
+      "d": "250 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik gramů je 0,5 kg?",
+    "moznosti": {
+      "a": "5 g",
+      "b": "50 g",
+      "c": "500 g",
+      "d": "5000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik dekagramů je 300 g?",
+    "moznosti": {
+      "a": "3 dag",
+      "b": "30 dag",
+      "c": "300 dag",
+      "d": "3000 dag"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik gramů je 4,5 kg?",
+    "moznosti": {
+      "a": "45 g",
+      "b": "450 g",
+      "c": "4500 g",
+      "d": "45000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik kilogramů je 12000 g?",
+    "moznosti": {
+      "a": "1,2 kg",
+      "b": "12 kg",
+      "c": "120 kg",
+      "d": "1200 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik miligramů je 8 g?",
+    "moznosti": {
+      "a": "80 mg",
+      "b": "800 mg",
+      "c": "8000 mg",
+      "d": "80000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik gramů je 9 dag?",
+    "moznosti": {
+      "a": "9 g",
+      "b": "90 g",
+      "c": "900 g",
+      "d": "9000 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik kilogramů je 750 g?",
+    "moznosti": {
+      "a": "7,5 kg",
+      "b": "0,75 kg",
+      "c": "75 kg",
+      "d": "0,075 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik gramů je 1,2 kg?",
+    "moznosti": {
+      "a": "12 g",
+      "b": "120 g",
+      "c": "1200 g",
+      "d": "12000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik dekagramů je 450 g?",
+    "moznosti": {
+      "a": "4,5 dag",
+      "b": "45 dag",
+      "c": "450 dag",
+      "d": "4500 dag"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik gramů je 2 t?",
+    "moznosti": {
+      "a": "200 g",
+      "b": "2000 g",
+      "c": "20000 g",
+      "d": "2000000 g"
+    },
+    "spravna_odpoved": "d"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik kilogramů je 3 t?",
+    "moznosti": {
+      "a": "30 kg",
+      "b": "300 kg",
+      "c": "3000 kg",
+      "d": "30000 kg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik gramů je 15 dag?",
+    "moznosti": {
+      "a": "15 g",
+      "b": "150 g",
+      "c": "1500 g",
+      "d": "15000 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik kilogramů je 1500 g?",
+    "moznosti": {
+      "a": "15 kg",
+      "b": "1,5 kg",
+      "c": "0,15 kg",
+      "d": "150 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik miligramů je 0,5 g?",
+    "moznosti": {
+      "a": "5 mg",
+      "b": "50 mg",
+      "c": "500 mg",
+      "d": "5000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik gramů je 3500 mg?",
+    "moznosti": {
+      "a": "35 g",
+      "b": "3,5 g",
+      "c": "0,35 g",
+      "d": "350 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik dekagramů je 1 kg?",
+    "moznosti": {
+      "a": "10 dag",
+      "b": "100 dag",
+      "c": "1000 dag",
+      "d": "1 dag"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik gramů je 0,25 kg?",
+    "moznosti": {
+      "a": "25 g",
+      "b": "250 g",
+      "c": "2500 g",
+      "d": "2,5 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik kilogramů je 2000000 g?",
+    "moznosti": {
+      "a": "200 kg",
+      "b": "2000 kg",
+      "c": "20 kg",
+      "d": "2 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik gramů je 6,5 kg?",
+    "moznosti": {
+      "a": "65 g",
+      "b": "650 g",
+      "c": "6500 g",
+      "d": "65000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik miligramů je 12 g?",
+    "moznosti": {
+      "a": "120 mg",
+      "b": "1200 mg",
+      "c": "12000 mg",
+      "d": "120000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik gramů je 75 dag?",
+    "moznosti": {
+      "a": "75 g",
+      "b": "750 g",
+      "c": "7500 g",
+      "d": "7,5 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik kilogramů je 400 g?",
+    "moznosti": {
+      "a": "4 kg",
+      "b": "0,4 kg",
+      "c": "40 kg",
+      "d": "0,04 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik gramů je 900 mg?",
+    "moznosti": {
+      "a": "9 g",
+      "b": "0,9 g",
+      "c": "90 g",
+      "d": "0,09 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik dekagramů je 2,5 kg?",
+    "moznosti": {
+      "a": "25 dag",
+      "b": "250 dag",
+      "c": "2500 dag",
+      "d": "2,5 dag"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik kilogramů je 5 t?",
+    "moznosti": {
+      "a": "500 kg",
+      "b": "5000 kg",
+      "c": "50 kg",
+      "d": "5 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik gramů je 0,75 kg?",
+    "moznosti": {
+      "a": "75 g",
+      "b": "750 g",
+      "c": "7500 g",
+      "d": "7,5 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik miligramů je 7,5 g?",
+    "moznosti": {
+      "a": "75 mg",
+      "b": "750 mg",
+      "c": "7500 mg",
+      "d": "75000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik gramů je 1,5 dag?",
+    "moznosti": {
+      "a": "15 g",
+      "b": "150 g",
+      "c": "1,5 g",
+      "d": "1500 g"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik kilogramů je 9000 g?",
+    "moznosti": {
+      "a": "0,9 kg",
+      "b": "9 kg",
+      "c": "90 kg",
+      "d": "900 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik gramů je 4 t?",
+    "moznosti": {
+      "a": "40000 g",
+      "b": "400000 g",
+      "c": "4000000 g",
+      "d": "4000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik dekagramů je 800 g?",
+    "moznosti": {
+      "a": "8 dag",
+      "b": "80 dag",
+      "c": "800 dag",
+      "d": "8000 dag"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik gramů je 250 mg?",
+    "moznosti": {
+      "a": "2,5 g",
+      "b": "25 g",
+      "c": "0,25 g",
+      "d": "250 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik kilogramů je 2,2 t?",
+    "moznosti": {
+      "a": "22 kg",
+      "b": "220 kg",
+      "c": "2200 kg",
+      "d": "22000 kg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik gramů je 3,3 kg?",
+    "moznosti": {
+      "a": "33 g",
+      "b": "330 g",
+      "c": "3300 g",
+      "d": "33000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik miligramů je 25 g?",
+    "moznosti": {
+      "a": "250 mg",
+      "b": "2500 mg",
+      "c": "25000 mg",
+      "d": "250000 mg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik kilogramů je 650 g?",
+    "moznosti": {
+      "a": "6,5 kg",
+      "b": "0,65 kg",
+      "c": "65 kg",
+      "d": "0,065 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik gramů je 45 dag?",
+    "moznosti": {
+      "a": "45 g",
+      "b": "450 g",
+      "c": "4500 g",
+      "d": "4,5 g"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik dekagramů je 5 g?",
+    "moznosti": {
+      "a": "0,5 dag",
+      "b": "5 dag",
+      "c": "50 dag",
+      "d": "0,05 dag"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik gramů je 1,8 kg?",
+    "moznosti": {
+      "a": "18 g",
+      "b": "180 g",
+      "c": "1800 g",
+      "d": "18000 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik kilogramů je 35000 g?",
+    "moznosti": {
+      "a": "3,5 kg",
+      "b": "35 kg",
+      "c": "350 kg",
+      "d": "0,35 kg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik miligramů je 0,25 g?",
+    "moznosti": {
+      "a": "25 mg",
+      "b": "250 mg",
+      "c": "2500 mg",
+      "d": "2,5 mg"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik gramů je 950 mg?",
+    "moznosti": {
+      "a": "95 g",
+      "b": "9,5 g",
+      "c": "0,95 g",
+      "d": "950 g"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik kilogramů je 1,5 t?",
+    "moznosti": {
+      "a": "15 kg",
+      "b": "150 kg",
+      "c": "1500 kg",
+      "d": "15000 kg"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik dekagramů je 120 g?",
+    "moznosti": {
+      "a": "12 dag",
+      "b": "120 dag",
+      "c": "1,2 dag",
+      "d": "1200 dag"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik gramů je 0,02 kg?",
+    "moznosti": {
+      "a": "2 g",
+      "b": "20 g",
+      "c": "200 g",
+      "d": "2000 g"
+    },
+    "spravna_odpoved": "b"
+  }
+]
