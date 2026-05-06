@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik pascalů je 1 kPa?",
+    "moznosti": {
+      "a": "10 Pa",
+      "b": "100 Pa",
+      "c": "1000 Pa",
+      "d": "10000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik pascalů je 2 MPa?",
+    "moznosti": {
+      "a": "2000 Pa",
+      "b": "200000 Pa",
+      "c": "2000000 Pa",
+      "d": "20000000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik kPa je 3000 Pa?",
+    "moznosti": {
+      "a": "3 kPa",
+      "b": "30 kPa",
+      "c": "0,3 kPa",
+      "d": "300 kPa"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik Pa je 5 kPa?",
+    "moznosti": {
+      "a": "50 Pa",
+      "b": "500 Pa",
+      "c": "5000 Pa",
+      "d": "50000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik Pa je 0,5 kPa?",
+    "moznosti": {
+      "a": "5 Pa",
+      "b": "50 Pa",
+      "c": "500 Pa",
+      "d": "5000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik kPa je 12000 Pa?",
+    "moznosti": {
+      "a": "1,2 kPa",
+      "b": "12 kPa",
+      "c": "120 kPa",
+      "d": "1200 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik Pa je 3 MPa?",
+    "moznosti": {
+      "a": "300000 Pa",
+      "b": "3000000 Pa",
+      "c": "30000 Pa",
+      "d": "3000 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik MPa je 1000000 Pa?",
+    "moznosti": {
+      "a": "0,1 MPa",
+      "b": "1 MPa",
+      "c": "10 MPa",
+      "d": "100 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik hPa je 1000 Pa?",
+    "moznosti": {
+      "a": "1 hPa",
+      "b": "10 hPa",
+      "c": "100 hPa",
+      "d": "1000 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik Pa je 25 hPa?",
+    "moznosti": {
+      "a": "250 Pa",
+      "b": "2500 Pa",
+      "c": "25 Pa",
+      "d": "25000 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik kPa je 45000 Pa?",
+    "moznosti": {
+      "a": "4,5 kPa",
+      "b": "45 kPa",
+      "c": "450 kPa",
+      "d": "0,45 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik Pa je 7 kPa?",
+    "moznosti": {
+      "a": "700 Pa",
+      "b": "7000 Pa",
+      "c": "70 Pa",
+      "d": "70000 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik MPa je 2000000 Pa?",
+    "moznosti": {
+      "a": "0,2 MPa",
+      "b": "2 MPa",
+      "c": "20 MPa",
+      "d": "200 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik Pa je 0,2 MPa?",
+    "moznosti": {
+      "a": "2000 Pa",
+      "b": "20000 Pa",
+      "c": "200000 Pa",
+      "d": "2000000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik hPa je 5000 Pa?",
+    "moznosti": {
+      "a": "5 hPa",
+      "b": "50 hPa",
+      "c": "500 hPa",
+      "d": "5000 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik Pa je 15 hPa?",
+    "moznosti": {
+      "a": "150 Pa",
+      "b": "1500 Pa",
+      "c": "15000 Pa",
+      "d": "15 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik kPa je 8000 Pa?",
+    "moznosti": {
+      "a": "0,8 kPa",
+      "b": "8 kPa",
+      "c": "80 kPa",
+      "d": "800 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik Pa je 12 kPa?",
+    "moznosti": {
+      "a": "120 Pa",
+      "b": "1200 Pa",
+      "c": "12000 Pa",
+      "d": "120000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik MPa je 5000000 Pa?",
+    "moznosti": {
+      "a": "0,5 MPa",
+      "b": "5 MPa",
+      "c": "50 MPa",
+      "d": "500 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik Pa je 0,8 MPa?",
+    "moznosti": {
+      "a": "80000 Pa",
+      "b": "800000 Pa",
+      "c": "8000 Pa",
+      "d": "8000000 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik hPa je 2000 Pa?",
+    "moznosti": {
+      "a": "2 hPa",
+      "b": "20 hPa",
+      "c": "200 hPa",
+      "d": "2000 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik Pa je 60 hPa?",
+    "moznosti": {
+      "a": "600 Pa",
+      "b": "6000 Pa",
+      "c": "60000 Pa",
+      "d": "60 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik kPa je 25000 Pa?",
+    "moznosti": {
+      "a": "2,5 kPa",
+      "b": "25 kPa",
+      "c": "250 kPa",
+      "d": "2500 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik Pa je 100 kPa?",
+    "moznosti": {
+      "a": "1000 Pa",
+      "b": "10000 Pa",
+      "c": "100000 Pa",
+      "d": "1000000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik MPa je 3000000 Pa?",
+    "moznosti": {
+      "a": "0,3 MPa",
+      "b": "3 MPa",
+      "c": "30 MPa",
+      "d": "300 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik Pa je 1,5 kPa?",
+    "moznosti": {
+      "a": "15 Pa",
+      "b": "150 Pa",
+      "c": "1500 Pa",
+      "d": "15000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik hPa je 7500 Pa?",
+    "moznosti": {
+      "a": "7,5 hPa",
+      "b": "75 hPa",
+      "c": "750 hPa",
+      "d": "7500 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik Pa je 9 hPa?",
+    "moznosti": {
+      "a": "90 Pa",
+      "b": "900 Pa",
+      "c": "9000 Pa",
+      "d": "9 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik kPa je 60000 Pa?",
+    "moznosti": {
+      "a": "6 kPa",
+      "b": "60 kPa",
+      "c": "600 kPa",
+      "d": "0,6 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik Pa je 0,05 MPa?",
+    "moznosti": {
+      "a": "500 Pa",
+      "b": "5000 Pa",
+      "c": "50000 Pa",
+      "d": "500000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik MPa je 7000000 Pa?",
+    "moznosti": {
+      "a": "0,7 MPa",
+      "b": "7 MPa",
+      "c": "70 MPa",
+      "d": "700 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik Pa je 30 kPa?",
+    "moznosti": {
+      "a": "300 Pa",
+      "b": "3000 Pa",
+      "c": "30000 Pa",
+      "d": "300000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik hPa je 900 Pa?",
+    "moznosti": {
+      "a": "0,9 hPa",
+      "b": "9 hPa",
+      "c": "90 hPa",
+      "d": "900 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik Pa je 40 hPa?",
+    "moznosti": {
+      "a": "400 Pa",
+      "b": "4000 Pa",
+      "c": "40000 Pa",
+      "d": "40 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik kPa je 95000 Pa?",
+    "moznosti": {
+      "a": "9,5 kPa",
+      "b": "95 kPa",
+      "c": "950 kPa",
+      "d": "0,95 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik Pa je 250 kPa?",
+    "moznosti": {
+      "a": "2500 Pa",
+      "b": "25000 Pa",
+      "c": "250000 Pa",
+      "d": "2500000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik MPa je 9000000 Pa?",
+    "moznosti": {
+      "a": "0,9 MPa",
+      "b": "9 MPa",
+      "c": "90 MPa",
+      "d": "900 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik Pa je 2,5 kPa?",
+    "moznosti": {
+      "a": "25 Pa",
+      "b": "250 Pa",
+      "c": "2500 Pa",
+      "d": "25000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik hPa je 1200 Pa?",
+    "moznosti": {
+      "a": "1,2 hPa",
+      "b": "12 hPa",
+      "c": "120 hPa",
+      "d": "1200 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik Pa je 80 hPa?",
+    "moznosti": {
+      "a": "800 Pa",
+      "b": "8000 Pa",
+      "c": "80000 Pa",
+      "d": "80 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik kPa je 150000 Pa?",
+    "moznosti": {
+      "a": "15 kPa",
+      "b": "150 kPa",
+      "c": "1500 kPa",
+      "d": "1,5 kPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik Pa je 400 kPa?",
+    "moznosti": {
+      "a": "4000 Pa",
+      "b": "40000 Pa",
+      "c": "400000 Pa",
+      "d": "4000000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik MPa je 10000000 Pa?",
+    "moznosti": {
+      "a": "1 MPa",
+      "b": "10 MPa",
+      "c": "100 MPa",
+      "d": "0,1 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik Pa je 6 kPa?",
+    "moznosti": {
+      "a": "60 Pa",
+      "b": "600 Pa",
+      "c": "6000 Pa",
+      "d": "60000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik hPa je 3000 Pa?",
+    "moznosti": {
+      "a": "3 hPa",
+      "b": "30 hPa",
+      "c": "300 hPa",
+      "d": "3000 hPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik Pa je 55 hPa?",
+    "moznosti": {
+      "a": "550 Pa",
+      "b": "5500 Pa",
+      "c": "55000 Pa",
+      "d": "55 Pa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik kPa je 500000 Pa?",
+    "moznosti": {
+      "a": "5 kPa",
+      "b": "50 kPa",
+      "c": "500 kPa",
+      "d": "5000 kPa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik Pa je 0,01 MPa?",
+    "moznosti": {
+      "a": "100 Pa",
+      "b": "1000 Pa",
+      "c": "10000 Pa",
+      "d": "100000 Pa"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik MPa je 4000000 Pa?",
+    "moznosti": {
+      "a": "0,4 MPa",
+      "b": "4 MPa",
+      "c": "40 MPa",
+      "d": "400 MPa"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik Pa je 90 kPa?",
+    "moznosti": {
+      "a": "900 Pa",
+      "b": "9000 Pa",
+      "c": "90000 Pa",
+      "d": "900000 Pa"
+    },
+    "spravna_odpoved": "c"
+  }
+]
