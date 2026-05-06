@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik cm² je 1 m²?",
+    "moznosti": {
+      "a": "100 cm²",
+      "b": "1000 cm²",
+      "c": "10000 cm²",
+      "d": "100000 cm²"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik dm² je 1 m²?",
+    "moznosti": {
+      "a": "10 dm²",
+      "b": "100 dm²",
+      "c": "1000 dm²",
+      "d": "10000 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik cm² je 5 dm²?",
+    "moznosti": {
+      "a": "50 cm²",
+      "b": "500 cm²",
+      "c": "5000 cm²",
+      "d": "50000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik m² je 30000 cm²?",
+    "moznosti": {
+      "a": "3 m²",
+      "b": "30 m²",
+      "c": "0,3 m²",
+      "d": "300 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik mm² je 1 cm²?",
+    "moznosti": {
+      "a": "10 mm²",
+      "b": "100 mm²",
+      "c": "1000 mm²",
+      "d": "10000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik cm² je 2 m²?",
+    "moznosti": {
+      "a": "200 cm²",
+      "b": "2000 cm²",
+      "c": "20000 cm²",
+      "d": "200000 cm²"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik dm² je 7 m²?",
+    "moznosti": {
+      "a": "70 dm²",
+      "b": "700 dm²",
+      "c": "7000 dm²",
+      "d": "70000 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik m² je 500 dm²?",
+    "moznosti": {
+      "a": "5 m²",
+      "b": "50 m²",
+      "c": "0,5 m²",
+      "d": "5000 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik mm² je 4 cm²?",
+    "moznosti": {
+      "a": "40 mm²",
+      "b": "400 mm²",
+      "c": "4000 mm²",
+      "d": "40000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik cm² je 0,5 m²?",
+    "moznosti": {
+      "a": "500 cm²",
+      "b": "5000 cm²",
+      "c": "50000 cm²",
+      "d": "500000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik dm² je 800 cm²?",
+    "moznosti": {
+      "a": "8 dm²",
+      "b": "80 dm²",
+      "c": "0,8 dm²",
+      "d": "8000 dm²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik cm² je 12 dm²?",
+    "moznosti": {
+      "a": "120 cm²",
+      "b": "1200 cm²",
+      "c": "12000 cm²",
+      "d": "120000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik m² je 90000 cm²?",
+    "moznosti": {
+      "a": "9 m²",
+      "b": "90 m²",
+      "c": "0,9 m²",
+      "d": "900 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik mm² je 9 cm²?",
+    "moznosti": {
+      "a": "90 mm²",
+      "b": "900 mm²",
+      "c": "9000 mm²",
+      "d": "90000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik cm² je 3,5 m²?",
+    "moznosti": {
+      "a": "350 cm²",
+      "b": "3500 cm²",
+      "c": "35000 cm²",
+      "d": "350000 cm²"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik dm² je 2,5 m²?",
+    "moznosti": {
+      "a": "25 dm²",
+      "b": "250 dm²",
+      "c": "2500 dm²",
+      "d": "2,5 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik m² je 1200 dm²?",
+    "moznosti": {
+      "a": "12 m²",
+      "b": "120 m²",
+      "c": "1,2 m²",
+      "d": "0,12 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik cm² je 45 dm²?",
+    "moznosti": {
+      "a": "450 cm²",
+      "b": "4500 cm²",
+      "c": "45000 cm²",
+      "d": "450000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik mm² je 15 cm²?",
+    "moznosti": {
+      "a": "150 mm²",
+      "b": "1500 mm²",
+      "c": "15000 mm²",
+      "d": "150000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik dm² je 3500 cm²?",
+    "moznosti": {
+      "a": "35 dm²",
+      "b": "350 dm²",
+      "c": "3,5 dm²",
+      "d": "3500 dm²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik cm² je 0,8 m²?",
+    "moznosti": {
+      "a": "800 cm²",
+      "b": "8000 cm²",
+      "c": "80000 cm²",
+      "d": "800000 cm²"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik m² je 2500 dm²?",
+    "moznosti": {
+      "a": "25 m²",
+      "b": "250 m²",
+      "c": "2,5 m²",
+      "d": "0,25 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik mm² je 0,5 cm²?",
+    "moznosti": {
+      "a": "5 mm²",
+      "b": "50 mm²",
+      "c": "500 mm²",
+      "d": "5000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik cm² je 25 dm²?",
+    "moznosti": {
+      "a": "250 cm²",
+      "b": "2500 cm²",
+      "c": "25000 cm²",
+      "d": "250000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik dm² je 4 m²?",
+    "moznosti": {
+      "a": "40 dm²",
+      "b": "400 dm²",
+      "c": "4000 dm²",
+      "d": "4 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik m² je 60000 cm²?",
+    "moznosti": {
+      "a": "6 m²",
+      "b": "60 m²",
+      "c": "0,6 m²",
+      "d": "600 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik mm² je 8 cm²?",
+    "moznosti": {
+      "a": "80 mm²",
+      "b": "800 mm²",
+      "c": "8000 mm²",
+      "d": "80000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik cm² je 6 dm²?",
+    "moznosti": {
+      "a": "60 cm²",
+      "b": "600 cm²",
+      "c": "6000 cm²",
+      "d": "60000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik dm² je 9500 cm²?",
+    "moznosti": {
+      "a": "95 dm²",
+      "b": "950 dm²",
+      "c": "9,5 dm²",
+      "d": "0,95 dm²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik m² je 1500 dm²?",
+    "moznosti": {
+      "a": "15 m²",
+      "b": "150 m²",
+      "c": "1,5 m²",
+      "d": "0,15 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik cm² je 1,5 m²?",
+    "moznosti": {
+      "a": "1500 cm²",
+      "b": "15000 cm²",
+      "c": "150000 cm²",
+      "d": "150 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik mm² je 20 cm²?",
+    "moznosti": {
+      "a": "200 mm²",
+      "b": "2000 mm²",
+      "c": "20000 mm²",
+      "d": "200000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik dm² je 5,5 m²?",
+    "moznosti": {
+      "a": "55 dm²",
+      "b": "550 dm²",
+      "c": "5500 dm²",
+      "d": "5,5 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik cm² je 320 dm²?",
+    "moznosti": {
+      "a": "3200 cm²",
+      "b": "32000 cm²",
+      "c": "320000 cm²",
+      "d": "320 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik m² je 45000 cm²?",
+    "moznosti": {
+      "a": "4,5 m²",
+      "b": "45 m²",
+      "c": "0,45 m²",
+      "d": "450 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik mm² je 2,5 cm²?",
+    "moznosti": {
+      "a": "25 mm²",
+      "b": "250 mm²",
+      "c": "2500 mm²",
+      "d": "25000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik dm² je 200 cm²?",
+    "moznosti": {
+      "a": "2 dm²",
+      "b": "20 dm²",
+      "c": "200 dm²",
+      "d": "0,2 dm²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik cm² je 7,2 m²?",
+    "moznosti": {
+      "a": "7200 cm²",
+      "b": "72000 cm²",
+      "c": "720000 cm²",
+      "d": "720 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik m² je 300 dm²?",
+    "moznosti": {
+      "a": "3 m²",
+      "b": "30 m²",
+      "c": "0,3 m²",
+      "d": "3000 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik mm² je 30 cm²?",
+    "moznosti": {
+      "a": "300 mm²",
+      "b": "3000 mm²",
+      "c": "30000 mm²",
+      "d": "300000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik cm² je 18 dm²?",
+    "moznosti": {
+      "a": "180 cm²",
+      "b": "1800 cm²",
+      "c": "18000 cm²",
+      "d": "180000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik dm² je 0,9 m²?",
+    "moznosti": {
+      "a": "9 dm²",
+      "b": "90 dm²",
+      "c": "900 dm²",
+      "d": "0,9 dm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik m² je 80000 cm²?",
+    "moznosti": {
+      "a": "8 m²",
+      "b": "80 m²",
+      "c": "0,8 m²",
+      "d": "800 m²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik mm² je 12 cm²?",
+    "moznosti": {
+      "a": "120 mm²",
+      "b": "1200 mm²",
+      "c": "12000 mm²",
+      "d": "120000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik cm² je 50 dm²?",
+    "moznosti": {
+      "a": "500 cm²",
+      "b": "5000 cm²",
+      "c": "50000 cm²",
+      "d": "500000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik dm² je 6400 cm²?",
+    "moznosti": {
+      "a": "64 dm²",
+      "b": "640 dm²",
+      "c": "6,4 dm²",
+      "d": "0,64 dm²"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik m² je 50 dm²?",
+    "moznosti": {
+      "a": "5 m²",
+      "b": "0,5 m²",
+      "c": "50 m²",
+      "d": "0,05 m²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik mm² je 7 cm²?",
+    "moznosti": {
+      "a": "70 mm²",
+      "b": "700 mm²",
+      "c": "7000 mm²",
+      "d": "70000 mm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik cm² je 4,4 dm²?",
+    "moznosti": {
+      "a": "44 cm²",
+      "b": "440 cm²",
+      "c": "4400 cm²",
+      "d": "44000 cm²"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik dm² je 10 m²?",
+    "moznosti": {
+      "a": "10 dm²",
+      "b": "100 dm²",
+      "c": "1000 dm²",
+      "d": "10000 dm²"
+    },
+    "spravna_odpoved": "c"
+  }
+]
