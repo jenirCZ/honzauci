@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "otazka": "Kolik miliampérů je 1 A?",
+    "moznosti": {
+      "a": "10 mA",
+      "b": "100 mA",
+      "c": "1000 mA",
+      "d": "10000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 2,
+    "otazka": "Kolik ampérů je 3000 mA?",
+    "moznosti": {
+      "a": "0,3 A",
+      "b": "3 A",
+      "c": "30 A",
+      "d": "300 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 3,
+    "otazka": "Kolik milivoltů je 1 V?",
+    "moznosti": {
+      "a": "10 mV",
+      "b": "100 mV",
+      "c": "1000 mV",
+      "d": "10000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 4,
+    "otazka": "Kolik voltů je 5000 mV?",
+    "moznosti": {
+      "a": "0,5 V",
+      "b": "5 V",
+      "c": "50 V",
+      "d": "500 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 5,
+    "otazka": "Kolik ohmů je 1 kΩ?",
+    "moznosti": {
+      "a": "10 Ω",
+      "b": "100 Ω",
+      "c": "1000 Ω",
+      "d": "10000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 6,
+    "otazka": "Kolik kiloohmů je 4000 Ω?",
+    "moznosti": {
+      "a": "0,4 kΩ",
+      "b": "4 kΩ",
+      "c": "40 kΩ",
+      "d": "400 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 7,
+    "otazka": "Kolik miliampérů je 0,5 A?",
+    "moznosti": {
+      "a": "5 mA",
+      "b": "50 mA",
+      "c": "500 mA",
+      "d": "5000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 8,
+    "otazka": "Kolik ampérů je 750 mA?",
+    "moznosti": {
+      "a": "7,5 A",
+      "b": "0,75 A",
+      "c": "75 A",
+      "d": "0,075 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 9,
+    "otazka": "Kolik milivoltů je 12 V?",
+    "moznosti": {
+      "a": "120 mV",
+      "b": "1200 mV",
+      "c": "12000 mV",
+      "d": "120000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 10,
+    "otazka": "Kolik voltů je 250 mV?",
+    "moznosti": {
+      "a": "2,5 V",
+      "b": "0,25 V",
+      "c": "25 V",
+      "d": "0,025 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 11,
+    "otazka": "Kolik ohmů je 5 kΩ?",
+    "moznosti": {
+      "a": "50 Ω",
+      "b": "500 Ω",
+      "c": "5000 Ω",
+      "d": "50000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 12,
+    "otazka": "Kolik kiloohmů je 12000 Ω?",
+    "moznosti": {
+      "a": "1,2 kΩ",
+      "b": "12 kΩ",
+      "c": "120 kΩ",
+      "d": "1200 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 13,
+    "otazka": "Kolik miliampérů je 2 A?",
+    "moznosti": {
+      "a": "20 mA",
+      "b": "200 mA",
+      "c": "2000 mA",
+      "d": "20000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 14,
+    "otazka": "Kolik ampérů je 1500 mA?",
+    "moznosti": {
+      "a": "15 A",
+      "b": "1,5 A",
+      "c": "0,15 A",
+      "d": "150 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 15,
+    "otazka": "Kolik milivoltů je 3,5 V?",
+    "moznosti": {
+      "a": "35 mV",
+      "b": "350 mV",
+      "c": "3500 mV",
+      "d": "35000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 16,
+    "otazka": "Kolik voltů je 9000 mV?",
+    "moznosti": {
+      "a": "0,9 V",
+      "b": "9 V",
+      "c": "90 V",
+      "d": "900 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 17,
+    "otazka": "Kolik ohmů je 0,5 kΩ?",
+    "moznosti": {
+      "a": "5 Ω",
+      "b": "50 Ω",
+      "c": "500 Ω",
+      "d": "5000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 18,
+    "otazka": "Kolik kiloohmů je 25000 Ω?",
+    "moznosti": {
+      "a": "2,5 kΩ",
+      "b": "25 kΩ",
+      "c": "250 kΩ",
+      "d": "2500 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 19,
+    "otazka": "Kolik miliampérů je 0,25 A?",
+    "moznosti": {
+      "a": "25 mA",
+      "b": "250 mA",
+      "c": "2500 mA",
+      "d": "25000 mA"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 20,
+    "otazka": "Kolik ampérů je 50 mA?",
+    "moznosti": {
+      "a": "5 A",
+      "b": "0,5 A",
+      "c": "0,05 A",
+      "d": "0,005 A"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 21,
+    "otazka": "Kolik milivoltů je 24 V?",
+    "moznosti": {
+      "a": "240 mV",
+      "b": "2400 mV",
+      "c": "24000 mV",
+      "d": "240000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 22,
+    "otazka": "Kolik voltů je 1200 mV?",
+    "moznosti": {
+      "a": "12 V",
+      "b": "1,2 V",
+      "c": "0,12 V",
+      "d": "120 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 23,
+    "otazka": "Kolik ohmů je 8 kΩ?",
+    "moznosti": {
+      "a": "80 Ω",
+      "b": "800 Ω",
+      "c": "8000 Ω",
+      "d": "80000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 24,
+    "otazka": "Kolik kiloohmů je 6000 Ω?",
+    "moznosti": {
+      "a": "0,6 kΩ",
+      "b": "6 kΩ",
+      "c": "60 kΩ",
+      "d": "600 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 25,
+    "otazka": "Kolik miliampérů je 4,5 A?",
+    "moznosti": {
+      "a": "45 mA",
+      "b": "450 mA",
+      "c": "4500 mA",
+      "d": "45000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 26,
+    "otazka": "Kolik ampérů je 200 mA?",
+    "moznosti": {
+      "a": "2 A",
+      "b": "0,2 A",
+      "c": "20 A",
+      "d": "0,02 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 27,
+    "otazka": "Kolik milivoltů je 0,8 V?",
+    "moznosti": {
+      "a": "8 mV",
+      "b": "80 mV",
+      "c": "800 mV",
+      "d": "8000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 28,
+    "otazka": "Kolik voltů je 300 mV?",
+    "moznosti": {
+      "a": "3 V",
+      "b": "0,3 V",
+      "c": "30 V",
+      "d": "0,03 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 29,
+    "otazka": "Kolik ohmů je 15 kΩ?",
+    "moznosti": {
+      "a": "150 Ω",
+      "b": "1500 Ω",
+      "c": "15000 Ω",
+      "d": "150000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 30,
+    "otazka": "Kolik kiloohmů je 500 Ω?",
+    "moznosti": {
+      "a": "0,5 kΩ",
+      "b": "5 kΩ",
+      "c": "50 kΩ",
+      "d": "0,05 kΩ"
+    },
+    "spravna_odpoved": "a"
+  },
+  {
+    "id": 31,
+    "otazka": "Kolik miliampérů je 0,02 A?",
+    "moznosti": {
+      "a": "2 mA",
+      "b": "20 mA",
+      "c": "200 mA",
+      "d": "2000 mA"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 32,
+    "otazka": "Kolik ampérů je 6000 mA?",
+    "moznosti": {
+      "a": "0,6 A",
+      "b": "6 A",
+      "c": "60 A",
+      "d": "600 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 33,
+    "otazka": "Kolik milivoltů je 1,5 V?",
+    "moznosti": {
+      "a": "15 mV",
+      "b": "150 mV",
+      "c": "1500 mV",
+      "d": "15000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 34,
+    "otazka": "Kolik voltů je 750 mV?",
+    "moznosti": {
+      "a": "7,5 V",
+      "b": "0,75 V",
+      "c": "75 V",
+      "d": "0,075 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 35,
+    "otazka": "Kolik ohmů je 20 kΩ?",
+    "moznosti": {
+      "a": "200 Ω",
+      "b": "2000 Ω",
+      "c": "20000 Ω",
+      "d": "200000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 36,
+    "otazka": "Kolik kiloohmů je 1000 Ω?",
+    "moznosti": {
+      "a": "0,1 kΩ",
+      "b": "1 kΩ",
+      "c": "10 kΩ",
+      "d": "100 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 37,
+    "otazka": "Kolik miliampérů je 7 A?",
+    "moznosti": {
+      "a": "70 mA",
+      "b": "700 mA",
+      "c": "7000 mA",
+      "d": "70000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 38,
+    "otazka": "Kolik ampérů je 25 mA?",
+    "moznosti": {
+      "a": "2,5 A",
+      "b": "0,25 A",
+      "c": "0,025 A",
+      "d": "25 A"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 39,
+    "otazka": "Kolik milivoltů je 9 V?",
+    "moznosti": {
+      "a": "90 mV",
+      "b": "900 mV",
+      "c": "9000 mV",
+      "d": "90000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 40,
+    "otazka": "Kolik voltů je 100 mV?",
+    "moznosti": {
+      "a": "1 V",
+      "b": "0,1 V",
+      "c": "10 V",
+      "d": "0,01 V"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 41,
+    "otazka": "Kolik ohmů je 2,5 kΩ?",
+    "moznosti": {
+      "a": "25 Ω",
+      "b": "250 Ω",
+      "c": "2500 Ω",
+      "d": "25000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 42,
+    "otazka": "Kolik kiloohmů je 9000 Ω?",
+    "moznosti": {
+      "a": "0,9 kΩ",
+      "b": "9 kΩ",
+      "c": "90 kΩ",
+      "d": "900 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 43,
+    "otazka": "Kolik miliampérů je 0,1 A?",
+    "moznosti": {
+      "a": "1 mA",
+      "b": "10 mA",
+      "c": "100 mA",
+      "d": "1000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 44,
+    "otazka": "Kolik ampérů je 900 mA?",
+    "moznosti": {
+      "a": "9 A",
+      "b": "0,9 A",
+      "c": "90 A",
+      "d": "0,09 A"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 45,
+    "otazka": "Kolik milivoltů je 18 V?",
+    "moznosti": {
+      "a": "180 mV",
+      "b": "1800 mV",
+      "c": "18000 mV",
+      "d": "180000 mV"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 46,
+    "otazka": "Kolik voltů je 50 mV?",
+    "moznosti": {
+      "a": "5 V",
+      "b": "0,5 V",
+      "c": "0,05 V",
+      "d": "0,005 V"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 47,
+    "otazka": "Kolik ohmů je 50 kΩ?",
+    "moznosti": {
+      "a": "500 Ω",
+      "b": "5000 Ω",
+      "c": "50000 Ω",
+      "d": "500000 Ω"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 48,
+    "otazka": "Kolik kiloohmů je 3000 Ω?",
+    "moznosti": {
+      "a": "0,3 kΩ",
+      "b": "3 kΩ",
+      "c": "30 kΩ",
+      "d": "300 kΩ"
+    },
+    "spravna_odpoved": "b"
+  },
+  {
+    "id": 49,
+    "otazka": "Kolik miliampérů je 1,2 A?",
+    "moznosti": {
+      "a": "12 mA",
+      "b": "120 mA",
+      "c": "1200 mA",
+      "d": "12000 mA"
+    },
+    "spravna_odpoved": "c"
+  },
+  {
+    "id": 50,
+    "otazka": "Kolik voltů je 15000 mV?",
+    "moznosti": {
+      "a": "1,5 V",
+      "b": "15 V",
+      "c": "150 V",
+      "d": "1500 V"
+    },
+    "spravna_odpoved": "b"
+  }
+]
